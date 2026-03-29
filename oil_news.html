@@ -45,11 +45,24 @@
 <body>
 <div class="mw">
 
+<!-- NAV BAR -->
+<div style="background:#1e293b;border:1.5px solid #334155;border-radius:10px;padding:8px 14px;
+     margin-bottom:12px;display:flex;align-items:center;gap:10px;font-size:12px">
+  <a href="./index.html" style="color:#94a3b8;text-decoration:none;font-weight:700;
+     padding:4px 10px;border-radius:8px;background:#0f172a;border:1px solid #334155">
+    ← ホーム
+  </a>
+  <span style="color:#334155">|</span>
+  <span style="color:#ff9f1c;font-weight:800">🛢️ 原油（WTI / Brent）</span>
+  <span style="flex:1"></span>
+  <span style="color:#00b96b;font-size:10px;font-weight:700">● LIVE</span>
+</div>
+
 <!-- UPDATE BAR -->
 <div style="background:var(--w);border:1.5px solid var(--bo);border-radius:10px;padding:8px 14px;
      margin-bottom:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;font-size:11px;color:var(--mu)">
   <span>📡 パル原液: <strong style="color:var(--tx)">2026/3/29 23:02 JST</strong></span>
-  <span>🤖 生成: <strong style="color:var(--tx)">2026/3/30 01:31 JST</strong></span>
+  <span>🤖 生成: <strong style="color:var(--tx)">2026/3/30 01:34 JST</strong></span>
   <span style="color:var(--gr);font-weight:700">● 自動更新中（15分）</span>
   <span style="color:var(--bl)">蓄積: 19件 (2026-03-26〜)</span>
 </div>
@@ -563,7 +576,7 @@
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;border-radius:8px;font-size:11px;font-weight:700">🔴 未発生</span>
               <span style="background:#fff8e1;color:#b45309;padding:2px 8px;border-radius:8px;font-size:11px">⚡ 危険度: 高</span>
-              <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">🕐 最終確認: 2026/3/30 01:31 JST</span>
+              <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">🕐 最終確認: 2026/3/30 01:34 JST</span>
             </div>
           </div>
         </div><div style="display:flex;align-items:flex-start;gap:12px;padding:12px 14px;
@@ -574,7 +587,7 @@
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;border-radius:8px;font-size:11px;font-weight:700">🔴 未発生</span>
               <span style="background:#fff8e1;color:#b45309;padding:2px 8px;border-radius:8px;font-size:11px">⚡ 危険度: 中</span>
-              <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">🕐 最終確認: 2026/3/30 01:31 JST</span>
+              <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">🕐 最終確認: 2026/3/30 01:34 JST</span>
             </div>
           </div>
         </div><div style="display:flex;align-items:flex-start;gap:12px;padding:12px 14px;
@@ -585,7 +598,7 @@
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;border-radius:8px;font-size:11px;font-weight:700">🔴 未発生</span>
               <span style="background:#fff8e1;color:#b45309;padding:2px 8px;border-radius:8px;font-size:11px">⚡ 危険度: 中</span>
-              <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">🕐 最終確認: 2026/3/30 01:31 JST</span>
+              <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">🕐 最終確認: 2026/3/30 01:34 JST</span>
             </div>
           </div>
         </div>
@@ -937,9 +950,16 @@
 
 </div><!-- /mw -->
 
-<div style="text-align:center;margin-top:40px;font-size:11px;color:var(--mu)">
-  <p>📡 パル原液（Supabase）｜ 🤖 ジェン自動生成 ｜ 15分ごと自動更新</p>
-  <p style="margin-top:4px">v4.1 — クロスマーケット + ニュース抽出 + 時間軸強化 + スコア根拠テーブル + 監視パネル</p>
+<div style="text-align:center;margin-top:40px;padding:20px 0;border-top:1px solid var(--bo)">
+  <a href="./index.html" style="display:inline-block;background:#1e293b;color:#94a3b8;
+     text-decoration:none;font-size:13px;font-weight:700;padding:10px 24px;
+     border-radius:20px;border:1.5px solid #334155;margin-bottom:14px">
+    ← ホームへ戻る
+  </a>
+  <div style="font-size:11px;color:var(--mu)">
+    <p>📡 パル原液（Supabase）｜ 🤖 ジェン自動生成 ｜ 15分ごと自動更新</p>
+    <p style="margin-top:4px">v4.2 — ナビゲーション追加 + クロスマーケット + ニュース抽出 + 時間軸強化</p>
+  </div>
 </div>
 
 <script>

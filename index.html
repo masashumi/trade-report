@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>📊 Masa Trade Intelligence</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:linear-gradient(135deg,#0f172a,#1e293b);min-height:100vh;
+       font-family:'Segoe UI','Noto Sans JP',sans-serif;color:#f1f5f9;padding:24px 16px 60px}
+  .mw{max-width:860px;margin:0 auto}
+  .header{text-align:center;padding:40px 0 32px}
+  .header h1{font-size:28px;font-weight:900;margin-bottom:8px;
+    background:linear-gradient(135deg,#ff9f1c,#ff6b2b);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .header p{font-size:13px;color:#94a3b8}
+  .section-title{font-size:12px;font-weight:700;letter-spacing:2px;color:#64748b;
+    text-transform:uppercase;margin:28px 0 12px;padding-left:4px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:8px}
+  .card{background:#1e293b;border:1.5px solid #334155;border-radius:16px;padding:20px;
+    text-decoration:none;color:#f1f5f9;transition:all .2s;display:block;position:relative;overflow:hidden}
+  .card:hover{transform:translateY(-3px);border-color:#475569;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+  .card.active{border-color:#ff6b2b;background:linear-gradient(135deg,#1e293b,#2d1f0e)}
+  .card.active::before{content:'● LIVE';position:absolute;top:12px;right:12px;
+    font-size:9px;font-weight:700;color:#ff6b2b;letter-spacing:1px}
+  .card.soon{opacity:.5;cursor:default}
+  .card.soon:hover{transform:none;box-shadow:none}
+  .card-icon{font-size:28px;margin-bottom:10px}
+  .card-name{font-size:15px;font-weight:800;margin-bottom:4px}
+  .card-desc{font-size:11px;color:#64748b;line-height:1.5}
+  .card-score{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;
+    border-radius:10px;margin-top:8px}
+  .score-pos{background:#00b96b20;color:#00b96b;border:1px solid #00b96b40}
+  .score-neg{background:#ff3d5a20;color:#ff3d5a;border:1px solid #ff3d5a40}
+  .score-neu{background:#64748b20;color:#64748b;border:1px solid #64748b40}
+  .badge-soon{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;
+    border-radius:10px;margin-top:8px;background:#334155;color:#64748b}
+  .footer{text-align:center;margin-top:48px;font-size:11px;color:#475569}
+  .status-bar{background:#0f172a;border:1px solid #1e293b;border-radius:10px;
+    padding:10px 16px;margin-bottom:24px;display:flex;flex-wrap:wrap;gap:12px;
+    justify-content:center;font-size:11px;color:#64748b}
+  .status-bar span{display:flex;align-items:center;gap:4px}
+  .dot{width:6px;height:6px;border-radius:50%;background:#00b96b;animation:blink 2s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+</style>
+</head>
+<body>
+<div class="mw">
+
+<div class="header">
+  <div style="font-size:40px;margin-bottom:12px">📊</div>
+  <h1>Masa Trade Intelligence</h1>
+  <p>パル × ジェン — 自分専用マーケット分析基盤</p>
+</div>
+
+<div class="status-bar">
+  <span><span class="dot"></span> システム稼働中</span>
+  <span>🤖 パル原液 → ジェン自動生成</span>
+  <span>⏱ 15分ごと自動更新</span>
+  <span>📅 2026-03-30</span>
+</div>
+
+<!-- エネルギー -->
+<div class="section-title">⚡ エネルギー</div>
+<div class="grid">
+  <a href="./oil_news.html" class="card active">
+    <div class="card-icon">🛢️</div>
+    <div class="card-name">原油（WTI / Brent）</div>
+    <div class="card-desc">地政学プレミアム × ホルムズ封鎖リスク × COT分析</div>
+    <div class="card-score score-pos">スコア +1 ▲ LONG</div>
+  </a>
+  <div class="card soon">
+    <div class="card-icon">⛽</div>
+    <div class="card-name">天然ガス（NG）</div>
+    <div class="card-desc">季節需要 × LNG輸出 × 在庫サイクル</div>
+    <div class="badge-soon">準備中</div>
+  </div>
+</div>
+
+<!-- 穀物 -->
+<div class="section-title">🌾 穀物</div>
+<div class="grid">
+  <div class="card soon">
+    <div class="card-icon">🌾</div>
+    <div class="card-name">小麦（WHEAT）</div>
+    <div class="card-desc">ウクライナ供給 × 天候リスク × 需給バランス</div>
+    <div class="badge-soon">準備中</div>
+  </div>
+  <div class="card soon">
+    <div class="card-icon">🌽</div>
+    <div class="card-name">トウモロコシ（CORN）</div>
+    <div class="card-desc">バイオ燃料需要 × 米農業省報告 × ブラジル作況</div>
+    <div class="badge-soon">準備中</div>
+  </div>
+  <div class="card soon">
+    <div class="card-icon">🫘</div>
+    <div class="card-name">大豆（SOYBEAN）</div>
+    <div class="card-desc">中国輸入動向 × アルゼンチン作況 × 米中関係</div>
+    <div class="badge-soon">準備中</div>
+  </div>
+</div>
+
+<!-- 貴金属 -->
+<div class="section-title">✨ 貴金属</div>
+<div class="grid">
+  <div class="card soon">
+    <div class="card-icon">🥇</div>
+    <div class="card-name">金（Gold）</div>
+    <div class="card-desc">リスクオフ × 実質金利 × 中央銀行購入</div>
+    <div class="badge-soon">準備中</div>
+  </div>
+  <div class="card soon">
+    <div class="card-icon">🥈</div>
+    <div class="card-name">銀（Silver）</div>
+    <div class="card-desc">工業需要 × 太陽光パネル × Gold/Silverレシオ</div>
+    <div class="badge-soon">準備中</div>
+  </div>
+</div>
+
+<!-- FX -->
+<div class="section-title">💱 FX</div>
+<div class="grid">
+  <div class="card soon">
+    <div class="card-icon">💴</div>
+    <div class="card-name">USD/JPY</div>
+    <div class="card-desc">日米金利差 × 介入リスク × リスクセンチメント</div>
+    <div class="badge-soon">準備中</div>
+  </div>
+  <div class="card soon">
+    <div class="card-icon">💶</div>
+    <div class="card-name">EUR/USD</div>
+    <div class="card-desc">ECB政策 × ユーロ圏景気 × ドル指数</div>
+    <div class="badge-soon">準備中</div>
+  </div>
+</div>
+
+<!-- インデックス -->
+<div class="section-title">📈 インデックス・マクロ</div>
+<div class="grid">
+  <div class="card soon">
+    <div class="card-icon">📊</div>
+    <div class="card-name">S&P 500</div>
+    <div class="card-desc">Fed政策 × 企業業績 × VIX × クレジットスプレッド</div>
+    <div class="badge-soon">準備中</div>
+  </div>
+  <div class="card soon">
+    <div class="card-icon">😨</div>
+    <div class="card-name">VIX（恐怖指数）</div>
+    <div class="card-desc">オプション市場 × テールリスク × センチメント</div>
+    <div class="badge-soon">準備中</div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>📡 Powered by パル（Perplexity）原液 × ジェン（Genspark Claw）自動生成</p>
+  <p style="margin-top:4px">Supabase DB蓄積 → 15分ごと自動更新 → GitHub/Cloudflare 自動デプロイ</p>
+</div>
+
+</div>
+</body>
+</html>

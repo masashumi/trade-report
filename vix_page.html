@@ -7,22 +7,37 @@
 <title>😨 VIX（恐怖指数） — Masa Trade Intelligence</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
-  :root{--bg:#f0f4ff;--w:#fff;--or:#ff6b2b;--gr:#00b96b;--re:#ff3d5a;--bl:#3b82f6;--pu:#8b5cf6;--tx:#1e293b;--mu:#64748b;--bo:#e2e8f0}
+  :root{--bg:#f0f4ff;--w:#fff;--or:#ff6b2b;--gr:#00b96b;--re:#ff3d5a;--bl:#3b82f6;--pu:#8b5cf6;
+        --tx:#1e293b;--mu:#64748b;--bo:#e2e8f0}
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--tx);font-family:'Segoe UI','Noto Sans JP',sans-serif;padding:14px 14px 60px}
-  .mw{max-width:900px;margin:0 auto}
-  .card{background:var(--w);border:1.5px solid var(--bo);border-radius:16px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,.05);margin-bottom:14px}
-  .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px} @media(max-width:600px){.g2{grid-template-columns:1fr}}
-  .sh{display:flex;align-items:center;gap:10px;margin:22px 0 10px} .sh h2{font-size:15px;font-weight:800;white-space:nowrap} .sh::after{content:'';flex:1;height:2px;background:var(--bo);border-radius:2px}
+  .mw{max-width:920px;margin:0 auto}
+  .card{background:var(--w);border:1.5px solid var(--bo);border-radius:16px;padding:18px;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);margin-bottom:14px;transition:transform .18s}
+  .card:hover{transform:translateY(-2px)}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:600px){.g2{grid-template-columns:1fr}}
+  .sh{display:flex;align-items:center;gap:10px;margin:22px 0 10px}
+  .sh h2{font-size:15px;font-weight:800;white-space:nowrap}
+  .sh::after{content:'';flex:1;height:2px;background:var(--bo);border-radius:2px}
   .lbl{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mu);margin-bottom:10px}
+  .lbadge{display:inline-flex;align-items:center;font-size:10px;font-weight:800;
+    padding:3px 10px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+  .l0{background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5}
+  .l1{background:#fff0ea;color:#ff6b2b;border:1px solid #ffccaa}
+  .l2{background:#eff6ff;color:#3b82f6;border:1px solid #bfdbfe}
+  .l4{background:#fef9c3;color:#854d0e;border:1px solid #fde047}
+  .l5{background:#e6f9f1;color:#166534;border:1px solid #86efac}
   details summary{cursor:pointer;font-size:12px;font-weight:700;color:var(--mu);padding:6px 0;list-style:none}
-  details summary::before{content:'▶ ';font-size:10px} details[open] summary::before{content:'▼ '}
+  details summary::-webkit-details-marker{display:none}
+  details summary::before{content:'▶ ';font-size:10px}
+  details[open] summary::before{content:'▼ '}
 </style>
 </head>
 <body>
 <div class="mw">
 
-<!-- NAV -->
+<!-- ① NAVバー -->
 <div style="background:#1e293b;border:1.5px solid #334155;border-radius:10px;padding:8px 14px;
      margin-bottom:12px;display:flex;align-items:center;gap:10px;font-size:12px">
   <a href="./index.html" style="color:#94a3b8;text-decoration:none;font-weight:700;
@@ -33,31 +48,32 @@
   <span style="color:#00b96b;font-size:10px;font-weight:700">● LIVE</span>
 </div>
 
-<!-- UPDATE BAR -->
+<!-- ② UPDATEバー -->
 <div style="background:var(--w);border:1.5px solid var(--bo);border-radius:10px;padding:8px 14px;
      margin-bottom:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;font-size:11px;color:var(--mu)">
   <span>📡 パル原液: <strong style="color:var(--tx)">2026/3/30 20:35 JST</strong></span>
-  <span>🤖 生成: <strong style="color:var(--tx)">2026/3/30 21:06 JST</strong></span>
-  <span style="color:var(--gr);font-weight:700">● 自動更新中</span>
+  <span>🤖 生成: <strong style="color:var(--tx)">2026/3/30 21:24 JST</strong></span>
+  <span style="color:var(--gr);font-weight:700">● 自動更新中（30分）</span>
   <span style="color:var(--bl)">蓄積: 1件 (2026-03-30〜)</span>
 </div>
 
-<!-- EXECUTIVE STRIP -->
-<div style="background:linear-gradient(135deg,#1e293b,#334155);border-radius:16px;padding:18px 22px;margin-bottom:16px;
-     display:flex;flex-wrap:wrap;gap:16px;align-items:center">
+<!-- ③ EXECUTIVE STRIP -->
+<div style="background:linear-gradient(135deg,#1e293b,#334155);border-radius:16px;padding:18px 22px;
+     margin-bottom:16px;display:flex;flex-wrap:wrap;gap:16px;align-items:center">
   <div style="flex:1;min-width:160px">
     <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:#94a3b8;margin-bottom:6px">TODAY'S VERDICT</div>
-    <div style="font-size:20px;font-weight:900;color:#fff;margin-bottom:4px">🟢 新規ロング可（押し目優先）</div>
-    <div style="font-size:12px;color:#94a3b8">GEOPOLITICS SUPPORTIVE</div>
+    <div style="font-size:20px;font-weight:900;color:#fff;margin-bottom:4px">🔥 TRIGGER — ロング</div>
+    <div style="font-size:12px;color:#94a3b8">主因: GEOPOLITICS SUPPORTIVE</div>
   </div>
   <div style="display:flex;gap:10px;flex-wrap:wrap">
     <div style="background:#ffffff15;border:1px solid #ffffff20;border-radius:12px;padding:10px 14px;text-align:center;min-width:70px">
       <div style="font-size:10px;color:#94a3b8;margin-bottom:4px">スコア</div>
       <div style="font-size:24px;font-weight:900;color:#00b96b">+8</div>
     </div>
-    <div style="background:#ffffff15;border:1px solid #ffffff20;border-radius:12px;padding:10px 14px;text-align:center;min-width:80px">
+    <div style="background:#ffffff15;border:1px solid #ffffff20;border-radius:12px;padding:10px 14px;text-align:center;min-width:90px">
       <div style="font-size:10px;color:#94a3b8;margin-bottom:4px">価格</div>
-      <div style="font-size:18px;font-weight:900;color:#ff9f1c">30.55</div>
+      <div style="font-size:16px;font-weight:900;color:#ff9f1c">30.55</div>
+      
     </div>
     <div style="background:#ffffff15;border:1px solid #ffffff20;border-radius:12px;padding:10px 14px;text-align:center;min-width:70px">
       <div style="font-size:10px;color:#94a3b8;margin-bottom:4px">方向</div>
@@ -66,122 +82,552 @@
   </div>
 </div>
 
-<!-- SCORE BREAKDOWN -->
-<div class="sh"><h2>📊 スコア内訳</h2></div>
-<div class="card" style="background:linear-gradient(135deg,#fff7ed,#fef3c7);border:2px solid #fed7aa">
+<!-- ④ 初見3行要約 -->
+<div style="background:linear-gradient(135deg,#fff7ed,#fef3c7);border:2px solid #fed7aa;border-radius:14px;
+     padding:14px 18px;margin-bottom:16px">
+  <div style="font-size:11px;font-weight:700;color:var(--or);margin-bottom:8px">📖 初見の方へ — 今何が起きているか（3行）</div>
+  <div style="font-size:13px;color:var(--tx);line-height:1.7"><div style="margin-bottom:6px">① price_main: 30.55（VIX Spot, Cboe Mar 30, -1.61% = -0.50）</div><div style="margin-bottom:6px">② 前日（Mar 27）終値: 31.05（Cboe確認）</div><div style="margin-bottom:6px">③ 直近レンジ（Mar）: 25.33（Mar 25）〜 30.55（Mar 30）</div></div>
+</div>
+
+<!-- ⑤ Layer0: イベントログ -->
+<div class="sh"><h2>📖 Layer 0 — イベントログ（スコア変化の記録）</h2></div>
+<span class="lbadge l0">イベントログ（動的）</span>
+<div class="card" style="margin-top:8px">
+  <div style="position:relative;padding-left:24px"><p style="font-size:13px;color:#94a3b8;padding:8px 0">スコア変化イベントなし（データ蓄積中）</p></div>
+  <div style="margin-top:10px;font-size:11px;color:var(--mu);background:#f8fafc;padding:6px 10px;border-radius:8px">
+    ▲スコア上昇 ▼スコア下降 ｜ スコア変化があった日のみ表示（固定イベントなし）
+  </div>
+</div>
+
+<!-- ⑥ Layer1: スコア内訳 -->
+<div class="sh"><h2>📸 Layer 1 — スコア内訳</h2></div>
+<span class="lbadge l1">スナップショット</span>
+<div class="card" style="margin-top:8px;background:linear-gradient(135deg,#fff7ed,#fef3c7);border:2px solid #fed7aa">
   <div style="display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap">
     <div>
       <div style="font-size:11px;font-weight:700;color:var(--or);margin-bottom:6px">スコア合計</div>
       <div style="background:var(--or);color:#fff;font-size:30px;font-weight:900;
            padding:8px 16px;border-radius:12px;display:inline-block;box-shadow:0 4px 12px rgba(255,107,43,.3)">+8</div>
       <div style="font-size:11px;color:var(--mu);margin-top:6px">前回: +8</div>
+      <div style="font-size:11px;color:var(--mu);margin-top:2px">⚡ リスク 主導</div>
     </div>
-    <div style="flex:1;min-width:200px;padding-top:4px"><div style="font-size:10px;color:#94a3b8;display:flex;margin-bottom:6px;margin-left:150px"><div style="flex:1;text-align:center">← マイナス</div><div style="width:2px"></div><div style="flex:1;text-align:center">プラス →</div></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-      <div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">💹 マクロ</div>
-      <div style="flex:1;display:flex;align-items:center;height:12px">
-          <div style="width:50%;display:flex;justify-content:flex-end;background:#f1f5f9;border-radius:5px 0 0 5px"></div>
+    <div style="flex:1;min-width:200px;padding-top:4px"><div style="font-size:10px;color:#94a3b8;display:flex;margin-bottom:6px;margin-left:160px"><div style="flex:1;text-align:center">← マイナス</div><div style="width:2px"></div><div style="flex:1;text-align:center">プラス →</div></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+      <div style="font-size:12px;font-weight:600;width:150px;flex-shrink:0">💹 マクロ</div>
+      <div style="flex:1"><div style="display:flex;align-items:center;height:12px">
+          <div style="flex:1;background:#f1f5f9;border-radius:5px 0 0 5px;height:12px"></div>
           <div style="width:2px;background:#cbd5e1;flex-shrink:0"></div>
           <div style="width:67%;height:12px;background:linear-gradient(90deg,#00b96b,#34d399);border-radius:0 5px 5px 0"></div>
           <div style="flex:1"></div>
-        </div>
+        </div></div>
       <div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#00b96b">+2</div>
     </div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-      <div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">⚡ リスク</div>
-      <div style="flex:1;display:flex;align-items:center;height:12px">
-          <div style="width:50%;display:flex;justify-content:flex-end;background:#f1f5f9;border-radius:5px 0 0 5px"></div>
+      <div style="font-size:12px;font-weight:600;width:150px;flex-shrink:0">⚡ リスク</div>
+      <div style="flex:1"><div style="display:flex;align-items:center;height:12px">
+          <div style="flex:1;background:#f1f5f9;border-radius:5px 0 0 5px;height:12px"></div>
           <div style="width:2px;background:#cbd5e1;flex-shrink:0"></div>
           <div style="width:100%;height:12px;background:linear-gradient(90deg,#00b96b,#34d399);border-radius:0 5px 5px 0"></div>
           <div style="flex:1"></div>
-        </div>
+        </div></div>
       <div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#00b96b">+3</div>
     </div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-      <div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">📅 イベント</div>
-      <div style="flex:1;display:flex;align-items:center;height:12px">
-          <div style="width:50%;display:flex;justify-content:flex-end;background:#f1f5f9;border-radius:5px 0 0 5px"></div>
+      <div style="font-size:12px;font-weight:600;width:150px;flex-shrink:0">📅 イベント</div>
+      <div style="flex:1"><div style="display:flex;align-items:center;height:12px">
+          <div style="flex:1;background:#f1f5f9;border-radius:5px 0 0 5px;height:12px"></div>
           <div style="width:2px;background:#cbd5e1;flex-shrink:0"></div>
           <div style="width:33%;height:12px;background:linear-gradient(90deg,#00b96b,#34d399);border-radius:0 5px 5px 0"></div>
           <div style="flex:1"></div>
-        </div>
+        </div></div>
       <div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#00b96b">+1</div>
     </div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-      <div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">😊 センチメント</div>
-      <div style="flex:1;display:flex;align-items:center;height:12px">
-          <div style="width:50%;display:flex;justify-content:flex-end;background:#f1f5f9;border-radius:5px 0 0 5px"></div>
+      <div style="font-size:12px;font-weight:600;width:150px;flex-shrink:0">😊 センチメント</div>
+      <div style="flex:1"><div style="display:flex;align-items:center;height:12px">
+          <div style="flex:1;background:#f1f5f9;border-radius:5px 0 0 5px;height:12px"></div>
           <div style="width:2px;background:#cbd5e1;flex-shrink:0"></div>
           <div style="width:67%;height:12px;background:linear-gradient(90deg,#00b96b,#34d399);border-radius:0 5px 5px 0"></div>
           <div style="flex:1"></div>
-        </div>
+        </div></div>
       <div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#00b96b">+2</div>
     </div></div>
   </div>
   <div style="font-size:13px;color:#94a3b8;padding:6px 0">前回比：変化なし</div>
 </div>
 
-<!-- CHART -->
-<div class="sh"><h2>📈 スコア推移</h2></div>
+<!-- ⑦ スコア根拠テーブル -->
 <div class="card">
-  <div style="font-size:12px;color:var(--mu);margin-bottom:8px">環境スコアの時系列変化（1件蓄積）</div>
-  <div style="position:relative;height:160px"><canvas id="c1"></canvas></div>
+  <div class="lbl">📊 スコア根拠テーブル（なぜこの数字か）</div>
+  <details style="margin-bottom:10px">
+          <summary>💹 マクロ: <strong style="color:#00b96b">+2</strong></summary>
+          <div style="overflow-x:auto;margin-top:8px">
+      <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr style="background:#f8fafc">
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">寄与</th>
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">根拠（raw_content抽出）</th>
+        </tr></thead>
+        <tbody><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">price_main: 30.55（VIX Spot, Cboe Mar 30, -1.61% = -0.50）</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">VIX先物カーブ: Apr 1 2026オプション最もアクティブ（Cboe確認）</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">macro: +2（スタグフレーション懸念・Fed利下げ後退・財政赤字拡大がマクロ不確実性増大）</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#ff3d5a;padding:5px 8px;white-space:nowrap">-1</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">sentiment: +2（COT VIX lev_money net = -40,460（ショート多い）→下方限定、かつSP500弱気センチメント継続）</td>
+        </tr></tbody>
+        <tfoot><tr style="border-top:2px solid #e2e8f0">
+          <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#00b96b">
+            合計: +2
+          </td>
+        </tr></tfoot>
+      </table>
+    </div>
+        </details><details style="margin-bottom:10px">
+          <summary>⚡ リスク: <strong style="color:#00b96b">+3</strong></summary>
+          <div style="overflow-x:auto;margin-top:8px">
+      <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr style="background:#f8fafc">
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">寄与</th>
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">根拠（raw_content抽出）</th>
+        </tr></thead>
+        <tbody><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">price_main: 30.55（VIX Spot, Cboe Mar 30, -1.61% = -0.50）</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">VIX先物カーブ: Apr 1 2026オプション最もアクティブ（Cboe確認）</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">macro: +2（スタグフレーション懸念・Fed利下げ後退・財政赤字拡大がマクロ不確実性増大）</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">risk: +3（イラン戦争リスク最大水準。ホルムズ封鎖リスク・追加地上部隊展開観測）</td>
+        </tr></tbody>
+        <tfoot><tr style="border-top:2px solid #e2e8f0">
+          <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#00b96b">
+            合計: +3
+          </td>
+        </tr></tfoot>
+      </table>
+    </div>
+        </details><details style="margin-bottom:10px">
+          <summary>📅 イベント: <strong style="color:#00b96b">+1</strong></summary>
+          <div style="overflow-x:auto;margin-top:8px">
+      <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr style="background:#f8fafc">
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">寄与</th>
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">根拠（raw_content抽出）</th>
+        </tr></thead>
+        <tbody><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">event: +1（3月31日雇用統計・4月四半期業績・4月FOMC等イベント密度高い）</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">【4. 固有リスクの原液（イベントリスク）】</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">ニュース: 戦争継続 + Fed hawkish転換 + イベント密度 = VIX高環境正当化</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">短期（1-3日）: VIX 27〜33。雇用統計 + Q1末。支配因子: イベントリスク</td>
+        </tr></tbody>
+        <tfoot><tr style="border-top:2px solid #e2e8f0">
+          <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#00b96b">
+            合計: +1
+          </td>
+        </tr></tfoot>
+      </table>
+    </div>
+        </details><details style="margin-bottom:10px">
+          <summary>😊 センチメント: <strong style="color:#00b96b">+2</strong></summary>
+          <div style="overflow-x:auto;margin-top:8px">
+      <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr style="background:#f8fafc">
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">寄与</th>
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">根拠（raw_content抽出）</th>
+        </tr></thead>
+        <tbody><tr>
+          <td style="font-weight:800;color:#ff3d5a;padding:5px 8px;white-space:nowrap">-1</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">sentiment: +2（COT VIX lev_money net = -40,460（ショート多い）→下方限定、かつSP500弱気センチメント継続）</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">COT VIX: lev_money = 61,060 long - 101,520 short = -40,460（レバレッジファンドはVIX売り）</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">※VIX売りは「収束」予想。停戦でショートカバー → VIX急落可能性</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">【6. センチメント/フロー（4層評価）】</td>
+        </tr></tbody>
+        <tfoot><tr style="border-top:2px solid #e2e8f0">
+          <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#00b96b">
+            合計: +2
+          </td>
+        </tr></tfoot>
+      </table>
+    </div>
+        </details>
+  <div style="font-size:10px;color:var(--mu);margin-top:8px">
+    根拠はraw_contentから自動抽出 ｜ ↑ または ↓ をタップして展開
+  </div>
 </div>
 
-<!-- SUMMARY -->
+<!-- ⑧ パル要約 -->
 <div class="sh"><h2>📝 パル要約</h2></div>
 <div class="card">
   <ul style="list-style:none"><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">VIXは30。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">55でhigh-volatility環境継続。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">score_total+8で「VIX高水準維持」がメインシナリオ。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">イラン戦争・スタグフレーション・高イベント密度の3重苦。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">COT lev_money -40,460（VIX売り多数）は停戦時のVIX急落リスク材料。</li></ul>
 </div>
 
-<!-- INVALIDATION -->
-<div class="sh"><h2>⚠️ 無効条件 監視パネル</h2></div>
+<!-- ⑨ Layer1.5: 重要ニュース -->
+<div class="sh"><h2>📰 Layer 1.5 — 重要ニュース</h2></div>
+<span class="lbadge l1">ニュース抽出</span>
+<div style="margin-top:8px;margin-bottom:14px"><div style="padding:12px 14px;background:#fff0ea;border:1.5px solid #ffccaa;
+              border-radius:12px;margin-bottom:10px">
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                <span style="background:#f97316;color:#fff;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700">↔️ Mixed</span>
+                <span style="background:#ff3d5a20;color:#ff3d5a;border:1px solid #ff3d5a40;padding:1px 6px;border-radius:8px;font-size:10px;font-weight:700">T1</span>
+                <span style="font-size:10px;color:#64748b">Macro</span>
+              </div>
+              <div style="font-size:13px;color:#1e293b;line-height:1.6">macro: +2（スタグフレーション懸念・Fed利下げ後退・財政赤字拡大がマクロ不確実性増大）</div>
+            </div></div>
+
+<!-- ⑩ Bull/Bear 因果チェーン -->
+<div class="card">
+  <div class="lbl">🔗 因果チェーン（Bull / Bear）</div>
+  <div style="margin-bottom:12px">
+    <div style="font-size:12px;font-weight:700;color:#00b96b;margin-bottom:6px">📈 Bull Chain（強気シナリオの連鎖）</div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:3px"><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">シナリオA（VIX高止まり30+）: 確率50%</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">シナリオB（VIX一時低下→再上昇）: 確率30%</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">発火: 停戦一時報道（false alarm）または雇用統計後の買い戻し → 価格帯: VIX 22</div></div></div>
+  </div>
+  <div>
+    <div style="font-size:12px;font-weight:700;color:#ff3d5a;margin-bottom:6px">📉 Bear Chain（弱気シナリオの連鎖）</div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:3px"><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">sentiment: +2（COT VIX lev_money net = -40,460（ショート</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">オプション需要: S&P 500プット需要高水準維持（下落ヘッジ）→IV高止まり</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">COT VIX: lev_money = 61,060 long - 101,520 short =</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">※VIX売りは「収束」予想。停戦でショートカバー → VIX急落可能性</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">COT（中長期）: VIX lev_money net = -40,460（VIX売り多数）</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">総合: VIXは高水準維持予想。COTのVIX売りは停戦リスクヘッジとしての警戒材料</div></div></div>
+  </div>
+</div>
+
+<!-- ⑪ Invalidation Monitor -->
 <div class="card" style="background:#fff8f8;border:2px solid #fca5a5">
+  <div class="lbl" style="color:#ff3d5a">⚠️ 無効条件 監視パネル（Invalidation Monitor）</div>
   <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 14px;
           background:#fff;border:1.5px solid #fca5a5;border-radius:12px;margin-bottom:8px">
           <span style="font-size:16px;flex-shrink:0">🕊️</span>
-          <div>
-            <div style="font-size:13px;font-weight:600;color:#1e293b">イラン停戦合意→VIX急落20台</div>
-            <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
-              border-radius:8px;font-size:10px;font-weight:700;margin-top:4px;display:inline-block">🔴 未発生</span>
+          <div style="flex:1">
+            <div style="font-size:13px;font-weight:600;color:#1e293b;margin-bottom:4px">イラン停戦合意→VIX急落20台</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
+                border-radius:8px;font-size:10px;font-weight:700">🔴 未発生</span>
+              <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">
+                🕐 最終確認: 2026/3/30 21:24 JST</span>
+            </div>
           </div>
         </div><div style="display:flex;align-items:flex-start;gap:10px;padding:10px 14px;
           background:#fff;border:1.5px solid #fca5a5;border-radius:12px;margin-bottom:8px">
           <span style="font-size:16px;flex-shrink:0">🚢</span>
-          <div>
-            <div style="font-size:13px;font-weight:600;color:#1e293b">Fed緊急利下げ→リスクオン</div>
-            <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
-              border-radius:8px;font-size:10px;font-weight:700;margin-top:4px;display:inline-block">🔴 未発生</span>
+          <div style="flex:1">
+            <div style="font-size:13px;font-weight:600;color:#1e293b;margin-bottom:4px">Fed緊急利下げ→リスクオン</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
+                border-radius:8px;font-size:10px;font-weight:700">🔴 未発生</span>
+              <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">
+                🕐 最終確認: 2026/3/30 21:24 JST</span>
+            </div>
           </div>
         </div><div style="display:flex;align-items:flex-start;gap:10px;padding:10px 14px;
           background:#fff;border:1.5px solid #fca5a5;border-radius:12px;margin-bottom:8px">
           <span style="font-size:16px;flex-shrink:0">🤝</span>
-          <div>
-            <div style="font-size:13px;font-weight:600;color:#1e293b">SP500 COT大幅ショートカバー</div>
-            <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
-              border-radius:8px;font-size:10px;font-weight:700;margin-top:4px;display:inline-block">🔴 未発生</span>
+          <div style="flex:1">
+            <div style="font-size:13px;font-weight:600;color:#1e293b;margin-bottom:4px">SP500 COT大幅ショートカバー</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
+                border-radius:8px;font-size:10px;font-weight:700">🔴 未発生</span>
+              <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">
+                🕐 最終確認: 2026/3/30 21:24 JST</span>
+            </div>
           </div>
         </div>
-</div>
-
-<!-- FOOTER -->
-<div style="text-align:center;margin-top:30px;padding:16px 0;border-top:1px solid var(--bo)">
-  <a href="./index.html" style="display:inline-block;background:#1e293b;color:#94a3b8;
-     text-decoration:none;font-size:13px;font-weight:700;padding:10px 24px;
-     border-radius:20px;border:1.5px solid #334155;margin-bottom:12px">← ホームへ戻る</a>
-  <div style="font-size:11px;color:var(--mu)">
-    <p>📡 パル原液（Supabase）｜ 🤖 ジェン自動生成 ｜ 自動更新</p>
-    <p style="margin-top:4px">generate_all_pages.py v1.0</p>
+  <div style="font-size:11px;color:var(--mu);margin-top:8px">
+    💡 これらの条件が成立したらポジションを見直す
   </div>
 </div>
 
+<!-- ⑫ Layer2: スコア推移チャート -->
+<div class="sh"><h2>📈 Layer 2 — スコア推移チャート</h2></div>
+<span class="lbadge l2">蓄積データ</span>
+<span style="font-size:11px;color:var(--mu);margin-left:6px">1件 ｜ 2026-03-30〜</span>
+<div class="card" style="margin-top:8px">
+  <div style="font-size:12px;color:var(--mu);margin-bottom:8px">環境スコアの時系列変化</div>
+  <div style="position:relative;height:180px"><canvas id="c1"></canvas></div>
 </div>
+
+<!-- ⑬ センチメントパネル -->
+
+<div class="sh"><h2>📡 センチメント詳細</h2></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+  <div class="card">
+    <div class="lbl">ポジション状況</div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+      <div style="font-size:12px;color:#64748b;width:100px;flex-shrink:0">IG ロング%</div>
+      <div style="flex:1;height:10px;background:#e2e8f0;border-radius:5px;overflow:hidden">
+        <div style="height:100%;width:50%;background:linear-gradient(90deg,#00b96b,#34d399);border-radius:5px"></div>
+      </div>
+      <div style="font-size:12px;font-weight:800;width:36px;text-align:right">null%</div>
+    </div>
+    <div style="font-size:11px;color:#64748b;margin-bottom:12px;padding:4px 8px;background:#f8fafc;border-radius:6px">📎 中立</div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+      <div style="font-size:12px;color:#64748b;width:100px;flex-shrink:0">Myfxbook%</div>
+      <div style="flex:1;height:10px;background:#e2e8f0;border-radius:5px;overflow:hidden">
+        <div style="height:100%;width:50%;background:linear-gradient(90deg,#ff6b2b,#ffb800);border-radius:5px"></div>
+      </div>
+      <div style="font-size:12px;font-weight:800;width:36px;text-align:right">null%</div>
+    </div>
+    <div style="font-size:11px;color:#64748b;padding:4px 8px;background:#f8fafc;border-radius:6px">📎 中立</div>
+  </div>
+  <div class="card">
+    <div class="lbl">COT（機関投資家）</div>
+    <div style="padding:12px 14px;background:#e6f9f1;border-radius:12px;border:1.5px solid #86efac;margin-bottom:10px">
+      <div style="font-size:11px;font-weight:700;color:#00b96b;margin-bottom:2px">MM Net</div>
+      <div style="font-size:24px;font-weight:900;color:#00b96b">-40460</div>
+    </div>
+    <div style="font-size:11px;color:#64748b;padding:4px 8px;background:#f8fafc;border-radius:6px">
+      ネットポジションは機関投資家の方向感を示す
+    </div>
+  </div>
+</div>
+
+<!-- ⑭ 時間軸別整理 -->
+<div class="sh"><h2>⏱️ 時間軸別整理（短期・中期・長期）</h2></div>
+<span class="lbadge l4">時間軸</span>
+<div style="margin-top:10px;margin-bottom:14px"><div style="padding:14px 16px;background:#fff0ea;border:2px solid #ffccaa;
+          border-radius:14px;margin-bottom:12px">
+          <div style="font-size:14px;font-weight:800;color:#ff6b2b;margin-bottom:8px">⚡ 短期（数日）</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">支配因子</div>
+              <div style="font-size:12px;color:#1e293b;line-height:1.6">イベントリスク</div>
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">方向性バイアス</div>
+              <div style="font-size:13px;font-weight:700;color:#ff6b2b">-</div>
+            </div>
+          </div>
+        </div><div style="padding:14px 16px;background:#eff6ff;border:2px solid #93c5fd;
+          border-radius:14px;margin-bottom:12px">
+          <div style="font-size:14px;font-weight:800;color:#3b82f6;margin-bottom:8px">📅 中期（数週間〜2ヶ月）</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">支配因子</div>
+              <div style="font-size:12px;color:#1e293b;line-height:1.6">地政学 + 経済指標</div>
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">方向性バイアス</div>
+              <div style="font-size:13px;font-weight:700;color:#3b82f6">-</div>
+            </div>
+          </div>
+        </div><div style="padding:14px 16px;background:#f5f3ff;border:2px solid #ddd6fe;
+          border-radius:14px;margin-bottom:12px">
+          <div style="font-size:14px;font-weight:800;color:#8b5cf6;margin-bottom:8px">🌐 長期（3ヶ月〜）</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">支配因子</div>
+              <div style="font-size:12px;color:#1e293b;line-height:1.6">停戦有無 + スタグフレーション</div>
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">方向性バイアス</div>
+              <div style="font-size:13px;font-weight:700;color:#8b5cf6">-</div>
+            </div>
+          </div>
+        </div></div>
+
+<!-- ⑮ Layer4: シナリオ分岐 -->
+<div class="sh"><h2>🔮 Layer 4 — シナリオ分岐</h2></div>
+<span class="lbadge l4">未来予測</span>
+<div style="margin-top:8px;margin-bottom:14px"><div style="padding:18px;border-radius:16px;border:2px solid #86efac;
+          background:#e6f9f1;margin-bottom:12px">
+          <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
+            <div style="text-align:center;min-width:60px">
+              <div style="font-size:34px;font-weight:900;line-height:1;color:#00b96b">50%</div>
+              <div style="font-size:10px;color:#64748b;margin-top:2px">前回 40%</div>
+              <div style="font-size:11px;font-weight:700;margin-top:2px"><span style="color:#00b96b">▲10%</span></div>
+            </div>
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:14px;font-weight:800;color:#00b96b;margin-bottom:8px">🟢 シナリオA：強気シナリオ（上昇継続）</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#00b96b;margin-bottom:4px">▶ 発火条件</div>
+                  <ul style="list-style:none"><li style="font-size:12px;color:#94a3b8">パル原液に詳細あり</li></ul>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#ff3d5a;margin-bottom:4px">✕ 否定条件</div>
+                  <ul style="list-style:none"><li style="font-size:12px;color:#94a3b8">パル原液に詳細あり</li></ul>
+                </div>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span style="background:#00b96b20;color:#00b96b;border:1px solid #00b96b40;
+                  padding:3px 10px;border-radius:20px;font-size:12px;font-weight:700">🎯 発火: イラン戦争継続 + 米経済指標悪化 + Fed利上げ観測持続 → 価格帯: VIX 28〜40</span>
+                <span style="background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:20px;font-size:11px">
+                  ⏱ 数日〜数週間</span>
+              </div>
+            </div>
+          </div>
+        </div><div style="padding:18px;border-radius:16px;border:2px solid #93c5fd;
+          background:#eff6ff;margin-bottom:12px">
+          <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
+            <div style="text-align:center;min-width:60px">
+              <div style="font-size:34px;font-weight:900;line-height:1;color:#3b82f6">30%</div>
+              <div style="font-size:10px;color:#64748b;margin-top:2px">前回 35%</div>
+              <div style="font-size:11px;font-weight:700;margin-top:2px"><span style="color:#ff3d5a">▼5%</span></div>
+            </div>
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:14px;font-weight:800;color:#3b82f6;margin-bottom:8px">🔵 シナリオB：中立シナリオ（レンジ継続）</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#3b82f6;margin-bottom:4px">▶ 発火条件</div>
+                  <ul style="list-style:none"><li style="font-size:12px;color:#94a3b8">パル原液に詳細あり</li></ul>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#ff3d5a;margin-bottom:4px">✕ 否定条件</div>
+                  <ul style="list-style:none"><li style="font-size:12px;color:#94a3b8">パル原液に詳細あり</li></ul>
+                </div>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span style="background:#3b82f620;color:#3b82f6;border:1px solid #3b82f640;
+                  padding:3px 10px;border-radius:20px;font-size:12px;font-weight:700">🎯 発火: 停戦一時報道（false alarm）または雇用統計後の買い戻し → 価格帯: VIX 22〜28（一時）</span>
+                <span style="background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:20px;font-size:11px">
+                  ⏱ 1〜2週間</span>
+              </div>
+            </div>
+          </div>
+        </div><div style="padding:18px;border-radius:16px;border:2px solid #fca5a5;
+          background:#fff0f2;margin-bottom:12px">
+          <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
+            <div style="text-align:center;min-width:60px">
+              <div style="font-size:34px;font-weight:900;line-height:1;color:#ff3d5a">20%</div>
+              <div style="font-size:10px;color:#64748b;margin-top:2px">前回 25%</div>
+              <div style="font-size:11px;font-weight:700;margin-top:2px"><span style="color:#ff3d5a">▼5%</span></div>
+            </div>
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:14px;font-weight:800;color:#ff3d5a;margin-bottom:8px">🔴 シナリオC：弱気シナリオ（下落リスク）</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#ff3d5a;margin-bottom:4px">▶ 発火条件</div>
+                  <ul style="list-style:none"><li style="margin-bottom:3px;font-size:12px">【8. トレード判断トリガー】</li></ul>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#ff3d5a;margin-bottom:4px">✕ 否定条件</div>
+                  <ul style="list-style:none"><li style="font-size:12px;color:#94a3b8">パル原液に詳細あり</li></ul>
+                </div>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span style="background:#ff3d5a20;color:#ff3d5a;border:1px solid #ff3d5a40;
+                  padding:3px 10px;border-radius:20px;font-size:12px;font-weight:700">🎯 発火: イラン停戦合意 + Fed利下げ転換 → 価格帯: VIX 16〜22</span>
+                <span style="background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:20px;font-size:11px">
+                  ⏱ 数日〜数週間</span>
+              </div>
+            </div>
+          </div>
+        </div></div>
+
+<!-- ⑯ Layer5: トレード判断 -->
+<div class="sh"><h2>⚙️ Layer 5 — トレード判断</h2></div>
+<span class="lbadge l5">実戦接続</span>
+<div class="card" style="margin-top:8px">
+  <div style="padding:16px 20px;background:#e6f9f1;border:2.5px solid #86efac;
+       border-radius:14px;margin-bottom:14px">
+    <div style="font-size:11px;font-weight:700;color:#00b96b;margin-bottom:6px">📌 今日の推奨アクション</div>
+    <div style="font-size:20px;font-weight:900;color:#00b96b;margin-bottom:8px">🔥 TRIGGER — ロング</div>
+    <div style="font-size:13px;color:#1e293b;line-height:1.6">スコア+8 / LONG方向。主因: GEOPOLITICS SUPPORTIVE。詳細はパル原液を確認してください。</div>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <div style="padding:8px 14px;background:#1e293b;border-radius:10px">
+      <div style="font-size:10px;color:#94a3b8;margin-bottom:2px">スコア</div>
+      <div style="font-size:14px;font-weight:800;color:#fff">+8</div>
+    </div>
+    <div style="padding:8px 14px;background:#1e293b;border-radius:10px">
+      <div style="font-size:10px;color:#94a3b8;margin-bottom:2px">方向</div>
+      <div style="font-size:14px;font-weight:800;color:#00b96b">LONG</div>
+    </div>
+    <div style="padding:8px 14px;background:#1e293b;border-radius:10px">
+      <div style="font-size:10px;color:#94a3b8;margin-bottom:2px">レジーム</div>
+      <div style="font-size:12px;font-weight:700;color:#94a3b8">⚡ リスク 主導</div>
+    </div>
+  </div>
+</div>
+
+<!-- ⑰ クロスマーケットパネル -->
+<div class="sh"><h2>🌐 クロスマーケット（リアルタイム）</h2></div>
+<div style="font-size:11px;color:var(--mu);margin-bottom:10px">
+  🟢同方向 / 🔴逆方向 = この銘柄への影響方向 ｜ Yahoo Finance リアルタイム
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin-bottom:16px">
+  <div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04)">
+      <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">ドル指数</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">100.36</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+0.76%</div>
+      <div style="font-size:10px;margin-top:5px">⚪ 中立</div>
+    </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04)">
+      <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">米10年金利</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">%4.440</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+1.09%</div>
+      <div style="font-size:10px;margin-top:5px">🔴 逆風</div>
+    </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04)">
+      <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">S&P500先物</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">6,452</div>
+      <div style="font-size:12px;font-weight:700;color:#ff3d5a;margin-top:4px">-2.84%</div>
+      <div style="font-size:10px;margin-top:5px">🔴 逆方向</div>
+    </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04)">
+      <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">恐怖指数</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">30.44</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+12.95%</div>
+      <div style="font-size:10px;margin-top:5px">🔴 逆風</div>
+    </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04)">
+      <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">金</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">$4,586</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+0.80%</div>
+      <div style="font-size:10px;margin-top:5px">🟢 同方向</div>
+    </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04)">
+      <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">WTI原油</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">$101.35</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+12.21%</div>
+      <div style="font-size:10px;margin-top:5px">🟢 同方向</div>
+    </div>
+</div>
+
+<!-- ⑱ フッター -->
+<div style="text-align:center;margin-top:30px;padding:16px 0;border-top:1px solid var(--bo)">
+  <a href="./index.html" style="display:inline-block;background:#1e293b;color:#94a3b8;
+     text-decoration:none;font-size:13px;font-weight:700;padding:10px 24px;
+     border-radius:20px;border:1.5px solid #334155;margin-bottom:14px">← ホームへ戻る</a>
+  <div style="font-size:11px;color:var(--mu)">
+    <p>📡 パル原液（Supabase）｜ 🤖 ジェン自動生成 ｜ 自動更新</p>
+    <p style="margin-top:4px">generate_all_pages.py v2.0 — 全18セクション対応</p>
+  </div>
+</div>
+
+</div><!-- /mw -->
+
 <script>
-new Chart(document.getElementById('c1').getContext('2d'),{type:'line',
-  data:{labels:["03-30"],datasets:[{data:[8],borderColor:'#ff6b2b',
+new Chart(document.getElementById('c1').getContext('2d'),{
+  type:'line',
+  data:{labels:["03-30"],datasets:[{
+    data:[8],borderColor:'#ff6b2b',
     backgroundColor:'rgba(255,107,43,0.1)',tension:0.3,fill:true,
-    pointBackgroundColor:'#ff6b2b',pointRadius:4,borderWidth:2.5}]},
-  options:{responsive:true,maintainAspectRatio:false,
+    pointBackgroundColor:'#ff6b2b',pointRadius:4,borderWidth:2.5
+  }]},
+  options:{
+    responsive:true,maintainAspectRatio:false,
     plugins:{legend:{display:false}},
-    scales:{y:{min:-10,max:10,grid:{color:'#f1f5f9'},ticks:{color:'#64748b',font:{size:11}}},
-             x:{grid:{display:false},ticks:{color:'#64748b',font:{size:10},maxRotation:45}}}}}
-  );
+    scales:{
+      y:{min:-10,max:10,grid:{color:'#f1f5f9'},ticks:{color:'#64748b',font:{size:11}}},
+      x:{grid:{display:false},ticks:{color:'#64748b',font:{size:10},maxRotation:45}}
+    }
+  }
+});
 </script>
 </body>
 </html>

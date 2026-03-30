@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta http-equiv="refresh" content="1800">
 <title>📊 Masa Trade Intelligence</title>
 <style>
@@ -33,7 +34,8 @@
   .footer{text-align:center;margin-top:40px;font-size:11px;color:#475569}
 </style>
 </head>
-<body><div class="mw">
+<body>
+<div class="mw">
 <div class="header">
   <div style="font-size:36px;margin-bottom:10px">📊</div>
   <h1>Masa Trade Intelligence</h1>
@@ -42,13 +44,17 @@
 <div class="status">
   <span><span class="dot"></span>システム稼働中</span>
   <span>🤖 パル原液 → ジェン自動生成</span>
-  <span>🕐 生成: 2026/3/30 21:06 JST</span>
+  <span>🕐 生成: 2026/3/30 21:24 JST</span>
+  <span>銘柄数: 14（原油含む）</span>
 </div>
-<div class="section-title">⚡ エネルギー</div><div class="grid"><a href="./oil_page.html" class="card active">
-              <div class="card-icon">🛢️</div>
-              <div class="card-name">原油（WTI/Brent）</div>
-              <div style="display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;margin-top:8px;background:#00b96b20;color:#00b96b;border:1px solid #00b96b40">スコア +2 · LONG</div>
-            </a><a href="./natural_gas_page.html" class="card active">
+<div class="section-title">⚡ エネルギー</div><div class="grid"><a href="./oil_news.html" class="card active">
+      <div class="card-icon">🛢️</div>
+      <div class="card-name">原油（WTI/Brent）</div>
+      <div style="display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;
+        margin-top:8px;background:#00b96b20;color:#00b96b;border:1px solid #00b96b40">
+        スコア +2 · LONG
+      </div>
+    </a><a href="./natural_gas_page.html" class="card active">
               <div class="card-icon">⛽</div>
               <div class="card-name">天然ガス</div>
               <div style="display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;margin-top:8px;background:#64748b20;color:#64748b;border:1px solid #64748b40">スコア 0 · NEUTRAL</div>
@@ -74,7 +80,7 @@
               <div style="display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;margin-top:8px;background:#ff3d5a20;color:#ff3d5a;border:1px solid #ff3d5a40">スコア -4 · SHORT</div>
             </a></div><div class="section-title">📊 インデックス</div><div class="grid"><a href="./sp500_page.html" class="card active">
               <div class="card-icon">📊</div>
-              <div class="card-name">S&P500</div>
+              <div class="card-name">S&amp;P500</div>
               <div style="display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;margin-top:8px;background:#ff3d5a20;color:#ff3d5a;border:1px solid #ff3d5a40">スコア -8 · SHORT</div>
             </a><a href="./vix_page.html" class="card active">
               <div class="card-icon">😨</div>
@@ -103,5 +109,8 @@
             </a></div>
 <div class="footer">
   <p>📡 Powered by パル（Perplexity）原液 × ジェン（Genspark Claw）自動生成</p>
+  <p style="margin-top:4px">v2.0 — 全18セクション対応 | 原油ページは generate_oil_page.py で管理</p>
 </div>
-</div></body></html>
+</div>
+</body>
+</html>

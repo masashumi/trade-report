@@ -7,22 +7,37 @@
 <title>🫘 大豆 — Masa Trade Intelligence</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
-  :root{--bg:#f0f4ff;--w:#fff;--or:#ff6b2b;--gr:#00b96b;--re:#ff3d5a;--bl:#3b82f6;--pu:#8b5cf6;--tx:#1e293b;--mu:#64748b;--bo:#e2e8f0}
+  :root{--bg:#f0f4ff;--w:#fff;--or:#ff6b2b;--gr:#00b96b;--re:#ff3d5a;--bl:#3b82f6;--pu:#8b5cf6;
+        --tx:#1e293b;--mu:#64748b;--bo:#e2e8f0}
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--tx);font-family:'Segoe UI','Noto Sans JP',sans-serif;padding:14px 14px 60px}
-  .mw{max-width:900px;margin:0 auto}
-  .card{background:var(--w);border:1.5px solid var(--bo);border-radius:16px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,.05);margin-bottom:14px}
-  .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px} @media(max-width:600px){.g2{grid-template-columns:1fr}}
-  .sh{display:flex;align-items:center;gap:10px;margin:22px 0 10px} .sh h2{font-size:15px;font-weight:800;white-space:nowrap} .sh::after{content:'';flex:1;height:2px;background:var(--bo);border-radius:2px}
+  .mw{max-width:920px;margin:0 auto}
+  .card{background:var(--w);border:1.5px solid var(--bo);border-radius:16px;padding:18px;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);margin-bottom:14px;transition:transform .18s}
+  .card:hover{transform:translateY(-2px)}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:600px){.g2{grid-template-columns:1fr}}
+  .sh{display:flex;align-items:center;gap:10px;margin:22px 0 10px}
+  .sh h2{font-size:15px;font-weight:800;white-space:nowrap}
+  .sh::after{content:'';flex:1;height:2px;background:var(--bo);border-radius:2px}
   .lbl{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mu);margin-bottom:10px}
+  .lbadge{display:inline-flex;align-items:center;font-size:10px;font-weight:800;
+    padding:3px 10px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+  .l0{background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5}
+  .l1{background:#fff0ea;color:#ff6b2b;border:1px solid #ffccaa}
+  .l2{background:#eff6ff;color:#3b82f6;border:1px solid #bfdbfe}
+  .l4{background:#fef9c3;color:#854d0e;border:1px solid #fde047}
+  .l5{background:#e6f9f1;color:#166534;border:1px solid #86efac}
   details summary{cursor:pointer;font-size:12px;font-weight:700;color:var(--mu);padding:6px 0;list-style:none}
-  details summary::before{content:'▶ ';font-size:10px} details[open] summary::before{content:'▼ '}
+  details summary::-webkit-details-marker{display:none}
+  details summary::before{content:'▶ ';font-size:10px}
+  details[open] summary::before{content:'▼ '}
 </style>
 </head>
 <body>
 <div class="mw">
 
-<!-- NAV -->
+<!-- ① NAVバー -->
 <div style="background:#1e293b;border:1.5px solid #334155;border-radius:10px;padding:8px 14px;
      margin-bottom:12px;display:flex;align-items:center;gap:10px;font-size:12px">
   <a href="./index.html" style="color:#94a3b8;text-decoration:none;font-weight:700;
@@ -33,31 +48,32 @@
   <span style="color:#00b96b;font-size:10px;font-weight:700">● LIVE</span>
 </div>
 
-<!-- UPDATE BAR -->
+<!-- ② UPDATEバー -->
 <div style="background:var(--w);border:1.5px solid var(--bo);border-radius:10px;padding:8px 14px;
      margin-bottom:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;font-size:11px;color:var(--mu)">
   <span>📡 パル原液: <strong style="color:var(--tx)">2026/3/30 20:35 JST</strong></span>
-  <span>🤖 生成: <strong style="color:var(--tx)">2026/3/30 21:06 JST</strong></span>
-  <span style="color:var(--gr);font-weight:700">● 自動更新中</span>
+  <span>🤖 生成: <strong style="color:var(--tx)">2026/3/30 21:24 JST</strong></span>
+  <span style="color:var(--gr);font-weight:700">● 自動更新中（30分）</span>
   <span style="color:var(--bl)">蓄積: 1件 (2026-03-30〜)</span>
 </div>
 
-<!-- EXECUTIVE STRIP -->
-<div style="background:linear-gradient(135deg,#1e293b,#334155);border-radius:16px;padding:18px 22px;margin-bottom:16px;
-     display:flex;flex-wrap:wrap;gap:16px;align-items:center">
+<!-- ③ EXECUTIVE STRIP -->
+<div style="background:linear-gradient(135deg,#1e293b,#334155);border-radius:16px;padding:18px 22px;
+     margin-bottom:16px;display:flex;flex-wrap:wrap;gap:16px;align-items:center">
   <div style="flex:1;min-width:160px">
     <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:#94a3b8;margin-bottom:6px">TODAY'S VERDICT</div>
-    <div style="font-size:20px;font-weight:900;color:#fff;margin-bottom:4px">🔴 新規ショート可（戻り売り）</div>
-    <div style="font-size:12px;color:#94a3b8">DEMAND DESTRUCTION</div>
+    <div style="font-size:20px;font-weight:900;color:#fff;margin-bottom:4px">🔥 TRIGGER — ショート</div>
+    <div style="font-size:12px;color:#94a3b8">主因: DEMAND DESTRUCTION</div>
   </div>
   <div style="display:flex;gap:10px;flex-wrap:wrap">
     <div style="background:#ffffff15;border:1px solid #ffffff20;border-radius:12px;padding:10px 14px;text-align:center;min-width:70px">
       <div style="font-size:10px;color:#94a3b8;margin-bottom:4px">スコア</div>
       <div style="font-size:24px;font-weight:900;color:#ff3d5a">-2</div>
     </div>
-    <div style="background:#ffffff15;border:1px solid #ffffff20;border-radius:12px;padding:10px 14px;text-align:center;min-width:80px">
+    <div style="background:#ffffff15;border:1px solid #ffffff20;border-radius:12px;padding:10px 14px;text-align:center;min-width:90px">
       <div style="font-size:10px;color:#94a3b8;margin-bottom:4px">価格</div>
-      <div style="font-size:18px;font-weight:900;color:#ff9f1c">1163.00</div>
+      <div style="font-size:16px;font-weight:900;color:#ff9f1c">1163.00</div>
+      
     </div>
     <div style="background:#ffffff15;border:1px solid #ffffff20;border-radius:12px;padding:10px 14px;text-align:center;min-width:70px">
       <div style="font-size:10px;color:#94a3b8;margin-bottom:4px">方向</div>
@@ -66,118 +82,542 @@
   </div>
 </div>
 
-<!-- SCORE BREAKDOWN -->
-<div class="sh"><h2>📊 スコア内訳</h2></div>
-<div class="card" style="background:linear-gradient(135deg,#fff7ed,#fef3c7);border:2px solid #fed7aa">
+<!-- ④ 初見3行要約 -->
+<div style="background:linear-gradient(135deg,#fff7ed,#fef3c7);border:2px solid #fed7aa;border-radius:14px;
+     padding:14px 18px;margin-bottom:16px">
+  <div style="font-size:11px;font-weight:700;color:var(--or);margin-bottom:8px">📖 初見の方へ — 今何が起きているか（3行）</div>
+  <div style="font-size:13px;color:var(--tx);line-height:1.7"><div style="margin-bottom:6px">① # 大豆レポート 2026-03-30 20:35 JST</div><div style="margin-bottom:6px">② 【現在価格】CBOT大豆 May 2026 (ZSK6): 1,161〜1,163 ¢/bu（CME Group: ZSK6 1161'4; Trading Economics: 1163.33 ¢/bu on Mar 30, +0.35%</div><div style="margin-bottom:6px">③ ZSK6（May）: 1161.25 ¢/bu</div></div>
+</div>
+
+<!-- ⑤ Layer0: イベントログ -->
+<div class="sh"><h2>📖 Layer 0 — イベントログ（スコア変化の記録）</h2></div>
+<span class="lbadge l0">イベントログ（動的）</span>
+<div class="card" style="margin-top:8px">
+  <div style="position:relative;padding-left:24px"><div style="display:flex;gap:14px;margin-bottom:0">
+              <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0">
+                <div style="width:12px;height:12px;border-radius:50%;background:#00b96b;
+                  border:3px solid #fff;box-shadow:0 0 0 2px #00b96b;margin-top:2px"></div>
+                
+              </div>
+              <div style="flex:1">
+                <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px">
+                  <span style="background:#00b96b;color:#fff;padding:2px 8px;border-radius:10px;
+                    font-size:10px;font-weight:700">SCORE▲1</span>
+                  <span style="font-size:11px;color:#64748b;font-weight:600">2026-03-30</span>
+                  <span style="color:#00b96b;font-size:10px;font-weight:700">● 継続中</span>
+                </div>
+                <div style="font-size:13px;color:#1e293b;line-height:1.6">スコア +1 変化 — crush需要増加・バイオ燃料支援でsupply_demand -2→-1</div>
+              </div>
+            </div></div>
+  <div style="margin-top:10px;font-size:11px;color:var(--mu);background:#f8fafc;padding:6px 10px;border-radius:8px">
+    ▲スコア上昇 ▼スコア下降 ｜ スコア変化があった日のみ表示（固定イベントなし）
+  </div>
+</div>
+
+<!-- ⑥ Layer1: スコア内訳 -->
+<div class="sh"><h2>📸 Layer 1 — スコア内訳</h2></div>
+<span class="lbadge l1">スナップショット</span>
+<div class="card" style="margin-top:8px;background:linear-gradient(135deg,#fff7ed,#fef3c7);border:2px solid #fed7aa">
   <div style="display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap">
     <div>
       <div style="font-size:11px;font-weight:700;color:var(--or);margin-bottom:6px">スコア合計</div>
       <div style="background:var(--or);color:#fff;font-size:30px;font-weight:900;
            padding:8px 16px;border-radius:12px;display:inline-block;box-shadow:0 4px 12px rgba(255,107,43,.3)">-2</div>
       <div style="font-size:11px;color:var(--mu);margin-top:6px">前回: -2</div>
+      <div style="font-size:11px;color:var(--mu);margin-top:2px">🌦️ 天候 主導</div>
     </div>
-    <div style="flex:1;min-width:200px;padding-top:4px"><div style="font-size:10px;color:#94a3b8;display:flex;margin-bottom:6px;margin-left:150px"><div style="flex:1;text-align:center">← マイナス</div><div style="width:2px"></div><div style="flex:1;text-align:center">プラス →</div></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-      <div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">🌦 天候</div>
-      <div style="flex:1;display:flex;align-items:center;height:12px">
+    <div style="flex:1;min-width:200px;padding-top:4px"><div style="font-size:10px;color:#94a3b8;display:flex;margin-bottom:6px;margin-left:160px"><div style="flex:1;text-align:center">← マイナス</div><div style="width:2px"></div><div style="flex:1;text-align:center">プラス →</div></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+      <div style="font-size:12px;font-weight:600;width:150px;flex-shrink:0">🌦️ 天候</div>
+      <div style="flex:1"><div style="display:flex;align-items:center;height:12px">
           <div style="flex:1"></div>
           <div style="width:33%;height:12px;background:linear-gradient(270deg,#ff3d5a,#fb7185);border-radius:5px 0 0 5px;margin-left:auto"></div>
           <div style="width:2px;background:#cbd5e1;flex-shrink:0"></div>
-          <div style="width:50%;background:#f1f5f9;border-radius:0 5px 5px 0"></div>
-        </div>
+          <div style="flex:1;background:#f1f5f9;border-radius:0 5px 5px 0;height:12px"></div>
+        </div></div>
       <div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#ff3d5a">-1</div>
     </div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-      <div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">📦 需給</div>
-      <div style="flex:1;display:flex;align-items:center;height:12px">
+      <div style="font-size:12px;font-weight:600;width:150px;flex-shrink:0">📦 需給</div>
+      <div style="flex:1"><div style="display:flex;align-items:center;height:12px">
           <div style="flex:1"></div>
           <div style="width:33%;height:12px;background:linear-gradient(270deg,#ff3d5a,#fb7185);border-radius:5px 0 0 5px;margin-left:auto"></div>
           <div style="width:2px;background:#cbd5e1;flex-shrink:0"></div>
-          <div style="width:50%;background:#f1f5f9;border-radius:0 5px 5px 0"></div>
-        </div>
+          <div style="flex:1;background:#f1f5f9;border-radius:0 5px 5px 0;height:12px"></div>
+        </div></div>
       <div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#ff3d5a">-1</div>
     </div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-      <div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">💹 マクロ</div>
-      <div style="flex:1;display:flex;align-items:center;height:12px">
+      <div style="font-size:12px;font-weight:600;width:150px;flex-shrink:0">💹 マクロ</div>
+      <div style="flex:1"><div style="display:flex;align-items:center;height:12px">
           <div style="flex:1"></div>
           <div style="width:33%;height:12px;background:linear-gradient(270deg,#ff3d5a,#fb7185);border-radius:5px 0 0 5px;margin-left:auto"></div>
           <div style="width:2px;background:#cbd5e1;flex-shrink:0"></div>
-          <div style="width:50%;background:#f1f5f9;border-radius:0 5px 5px 0"></div>
-        </div>
+          <div style="flex:1;background:#f1f5f9;border-radius:0 5px 5px 0;height:12px"></div>
+        </div></div>
       <div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#ff3d5a">-1</div>
     </div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-      <div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">😊 センチメント</div>
-      <div style="flex:1;display:flex;align-items:center;height:12px">
-          <div style="width:50%;display:flex;justify-content:flex-end;background:#f1f5f9;border-radius:5px 0 0 5px"></div>
+      <div style="font-size:12px;font-weight:600;width:150px;flex-shrink:0">😊 センチメント</div>
+      <div style="flex:1"><div style="display:flex;align-items:center;height:12px">
+          <div style="flex:1;background:#f1f5f9;border-radius:5px 0 0 5px;height:12px"></div>
           <div style="width:2px;background:#cbd5e1;flex-shrink:0"></div>
           <div style="width:33%;height:12px;background:linear-gradient(90deg,#00b96b,#34d399);border-radius:0 5px 5px 0"></div>
           <div style="flex:1"></div>
-        </div>
+        </div></div>
       <div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#00b96b">+1</div>
     </div></div>
   </div>
   <div style="display:flex;align-items:flex-start;gap:10px;padding:12px 16px;
           background:#e6f9f1;border-radius:12px;border:1.5px solid #86efac;margin-top:12px">
           <span style="font-size:20px;font-weight:900;color:#00b96b">▲1</span>
-          <div><div style="font-size:12px;font-weight:700;color:#00b96b">前回比スコア変化</div>
-          <div style="font-size:13px;color:#1e293b;margin-top:2px">crush需要増加・バイオ燃料支援でsupply_demand -2→-1</div></div></div>
+          <div>
+            <div style="font-size:12px;font-weight:700;color:#00b96b">前回比スコア変化</div>
+            <div style="font-size:13px;color:#1e293b;margin-top:2px">crush需要増加・バイオ燃料支援でsupply_demand -2→-1</div>
+          </div>
+        </div>
 </div>
 
-<!-- CHART -->
-<div class="sh"><h2>📈 スコア推移</h2></div>
+<!-- ⑦ スコア根拠テーブル -->
 <div class="card">
-  <div style="font-size:12px;color:var(--mu);margin-bottom:8px">環境スコアの時系列変化（1件蓄積）</div>
-  <div style="position:relative;height:160px"><canvas id="c1"></canvas></div>
+  <div class="lbl">📊 スコア根拠テーブル（なぜこの数字か）</div>
+  <details style="margin-bottom:10px">
+          <summary>🌦️ 天候: <strong style="color:#ff3d5a">-1</strong></summary>
+          <div style="overflow-x:auto;margin-top:8px">
+      <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr style="background:#f8fafc">
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">寄与</th>
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">根拠（raw_content抽出）</th>
+        </tr></thead>
+        <tbody><tr>
+          <td style="font-weight:800;color:#00b96b;padding:5px 8px;white-space:nowrap">+1</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">長期（3〜6ヶ月）: バイオ燃料需要＋国内crush増加が下値サポート。2026/27年新作大豆の天候次第</td>
+        </tr></tbody>
+        <tfoot><tr style="border-top:2px solid #e2e8f0">
+          <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#ff3d5a">
+            合計: -1
+          </td>
+        </tr></tfoot>
+      </table>
+    </div>
+        </details><details style="margin-bottom:10px">
+          <summary>📦 需給: <strong style="color:#ff3d5a">-1</strong></summary>
+          <div style="overflow-x:auto;margin-top:8px">
+      <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr style="background:#f8fafc">
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">寄与</th>
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">根拠（raw_content抽出）</th>
+        </tr></thead>
+        <tbody><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">| weather | -1 | -1 | 0 | ブラジル南部の乾燥懸念継続。アルゼンチン: -0.5Mトン減産（WASDE）。ウクライナも-0.5Mトン減産 |</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#00b96b;padding:5px 8px;white-space:nowrap">+1</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">| supply_demand | -1 | -2 | +1 | USDA Mar WASDE: 米国在庫350M ブッシェル（前月同）。ブラジル豊作（輸出最高水準期待）が圧迫要因継続。ただしUSDA crush需要+5M（ミール国内需要）</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#ff3d5a;padding:5px 8px;white-space:nowrap">-1</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">| macro | -1 | -1 | 0 | ドル高・米中貿易摩擦継続。中国の1〜2月大豆輸入12.55 MMT（7年ぶり最低：AgriNews）が最大の弱気材料 |</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">USDA 2025/26年米国大豆在庫: 350百万ブッシェル（前月同。AgriNews, Mar 23）</td>
+        </tr></tbody>
+        <tfoot><tr style="border-top:2px solid #e2e8f0">
+          <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#ff3d5a">
+            合計: -1
+          </td>
+        </tr></tfoot>
+      </table>
+    </div>
+        </details><details style="margin-bottom:10px">
+          <summary>💹 マクロ: <strong style="color:#ff3d5a">-1</strong></summary>
+          <div style="overflow-x:auto;margin-top:8px">
+      <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr style="background:#f8fafc">
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">寄与</th>
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">根拠（raw_content抽出）</th>
+        </tr></thead>
+        <tbody><tr>
+          <td style="font-weight:800;color:#ff3d5a;padding:5px 8px;white-space:nowrap">-1</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">| macro | -1 | -1 | 0 | ドル高・米中貿易摩擦継続。中国の1〜2月大豆輸入12.55 MMT（7年ぶり最低：AgriNews）が最大の弱気材料 |</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">## 5. マクロの原液（伝播経路）</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">ドル高（DXY 100）: 米国産大豆の割高感→輸出競争力低下</td>
+        </tr></tbody>
+        <tfoot><tr style="border-top:2px solid #e2e8f0">
+          <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#ff3d5a">
+            合計: -1
+          </td>
+        </tr></tfoot>
+      </table>
+    </div>
+        </details><details style="margin-bottom:10px">
+          <summary>😊 センチメント: <strong style="color:#00b96b">+1</strong></summary>
+          <div style="overflow-x:auto;margin-top:8px">
+      <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr style="background:#f8fafc">
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">寄与</th>
+          <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">根拠（raw_content抽出）</th>
+        </tr></thead>
+        <tbody><tr>
+          <td style="font-weight:800;color:#ff3d5a;padding:5px 8px;white-space:nowrap">-1</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">| macro | -1 | -1 | 0 | ドル高・米中貿易摩擦継続。中国の1〜2月大豆輸入12.55 MMT（7年ぶり最低：AgriNews）が最大の弱気材料 |</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">| sentiment | +1 | +1 | 0 | COT: MM大幅ネットロング(+197,904)。ロング優位継続 |</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">中国輸入（1〜2月）: 12.55 MMT（7年ぶり最低）→ 米中貿易摩擦の影響か</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">大豆ミール価格: $300/ショートトン（前月比+$5）</td>
+        </tr></tbody>
+        <tfoot><tr style="border-top:2px solid #e2e8f0">
+          <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#00b96b">
+            合計: +1
+          </td>
+        </tr></tfoot>
+      </table>
+    </div>
+        </details>
+  <div style="font-size:10px;color:var(--mu);margin-top:8px">
+    根拠はraw_contentから自動抽出 ｜ ↑ または ↓ をタップして展開
+  </div>
 </div>
 
-<!-- SUMMARY -->
+<!-- ⑧ パル要約 -->
 <div class="sh"><h2>📝 パル要約</h2></div>
 <div class="card">
   <ul style="list-style:none"><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">CBOT大豆May 2026は1163¢/bu（+0。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">3月16日の急落後1160台で下げ止まりを試みるが、米中貿易摩擦で中国の1〜2月輸入が7年ぶり最低。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">スコア-2（前回-3から+1改善）、COT大幅ロング(+197,904)の解消リスク残存。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">短期bearish。</li></ul>
 </div>
 
-<!-- INVALIDATION -->
-<div class="sh"><h2>⚠️ 無効条件 監視パネル</h2></div>
+<!-- ⑨ Layer1.5: 重要ニュース -->
+<div class="sh"><h2>📰 Layer 1.5 — 重要ニュース</h2></div>
+<span class="lbadge l1">ニュース抽出</span>
+<div style="margin-top:8px;margin-bottom:14px"><p style="font-size:13px;color:#94a3b8;padding:8px 0">ニュースデータ抽出中...</p></div>
+
+<!-- ⑩ Bull/Bear 因果チェーン -->
+<div class="card">
+  <div class="lbl">🔗 因果チェーン（Bull / Bear）</div>
+  <div style="margin-bottom:12px">
+    <div style="font-size:12px;font-weight:700;color:#00b96b;margin-bottom:6px">📈 Bull Chain（強気シナリオの連鎖）</div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:3px"><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">シナリオA（下落継続）【確率: 40%】**</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">シナリオC（反発上昇）【確率: 20%】**</div></div></div>
+  </div>
+  <div>
+    <div style="font-size:12px;font-weight:700;color:#ff3d5a;margin-bottom:6px">📉 Bear Chain（弱気シナリオの連鎖）</div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:3px"><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">| macro | -1 | -1 | 0 | ドル高・米中貿易摩擦継続。中国の1〜2月大豆輸入12</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">ブラジル豊作**: 最大の供給側弱気要因。記録的生産が輸出価格を圧迫</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">cot_mm_net: +197,904（long 226,854 - short 28,950）→</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">統合解釈**: COT大幅ロング（ロング解消が続けばさらに下落）×中国需要激減×ブラジル豊作 → フ</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">中期（1〜2ヶ月）: 米中貿易摩擦×ブラジル豊作で下落バイアス継続。bearish</div></div></div>
+  </div>
+</div>
+
+<!-- ⑪ Invalidation Monitor -->
 <div class="card" style="background:#fff8f8;border:2px solid #fca5a5">
+  <div class="lbl" style="color:#ff3d5a">⚠️ 無効条件 監視パネル（Invalidation Monitor）</div>
   <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 14px;
           background:#fff;border:1.5px solid #fca5a5;border-radius:12px;margin-bottom:8px">
           <span style="font-size:16px;flex-shrink:0">🕊️</span>
-          <div>
-            <div style="font-size:13px;font-weight:600;color:#1e293b">米中貿易協議再開・関税緩和で中国輸入回復</div>
-            <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
-              border-radius:8px;font-size:10px;font-weight:700;margin-top:4px;display:inline-block">🔴 未発生</span>
+          <div style="flex:1">
+            <div style="font-size:13px;font-weight:600;color:#1e293b;margin-bottom:4px">米中貿易協議再開・関税緩和で中国輸入回復</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
+                border-radius:8px;font-size:10px;font-weight:700">🔴 未発生</span>
+              <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">
+                🕐 最終確認: 2026/3/30 21:24 JST</span>
+            </div>
           </div>
         </div><div style="display:flex;align-items:flex-start;gap:10px;padding:10px 14px;
           background:#fff;border:1.5px solid #fca5a5;border-radius:12px;margin-bottom:8px">
           <span style="font-size:16px;flex-shrink:0">🚢</span>
-          <div>
-            <div style="font-size:13px;font-weight:600;color:#1e293b">Prospective Plantings大幅下振れ(<83M acres)</div>
-            <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
-              border-radius:8px;font-size:10px;font-weight:700;margin-top:4px;display:inline-block">🔴 未発生</span>
+          <div style="flex:1">
+            <div style="font-size:13px;font-weight:600;color:#1e293b;margin-bottom:4px">Prospective Plantings大幅下振れ(<83M acres)</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
+                border-radius:8px;font-size:10px;font-weight:700">🔴 未発生</span>
+              <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">
+                🕐 最終確認: 2026/3/30 21:24 JST</span>
+            </div>
           </div>
         </div>
-</div>
-
-<!-- FOOTER -->
-<div style="text-align:center;margin-top:30px;padding:16px 0;border-top:1px solid var(--bo)">
-  <a href="./index.html" style="display:inline-block;background:#1e293b;color:#94a3b8;
-     text-decoration:none;font-size:13px;font-weight:700;padding:10px 24px;
-     border-radius:20px;border:1.5px solid #334155;margin-bottom:12px">← ホームへ戻る</a>
-  <div style="font-size:11px;color:var(--mu)">
-    <p>📡 パル原液（Supabase）｜ 🤖 ジェン自動生成 ｜ 自動更新</p>
-    <p style="margin-top:4px">generate_all_pages.py v1.0</p>
+  <div style="font-size:11px;color:var(--mu);margin-top:8px">
+    💡 これらの条件が成立したらポジションを見直す
   </div>
 </div>
 
+<!-- ⑫ Layer2: スコア推移チャート -->
+<div class="sh"><h2>📈 Layer 2 — スコア推移チャート</h2></div>
+<span class="lbadge l2">蓄積データ</span>
+<span style="font-size:11px;color:var(--mu);margin-left:6px">1件 ｜ 2026-03-30〜</span>
+<div class="card" style="margin-top:8px">
+  <div style="font-size:12px;color:var(--mu);margin-bottom:8px">環境スコアの時系列変化</div>
+  <div style="position:relative;height:180px"><canvas id="c1"></canvas></div>
 </div>
+
+<!-- ⑬ センチメントパネル -->
+
+<div class="sh"><h2>📡 センチメント詳細</h2></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+  <div class="card">
+    <div class="lbl">ポジション状況</div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+      <div style="font-size:12px;color:#64748b;width:100px;flex-shrink:0">IG ロング%</div>
+      <div style="flex:1;height:10px;background:#e2e8f0;border-radius:5px;overflow:hidden">
+        <div style="height:100%;width:50%;background:linear-gradient(90deg,#00b96b,#34d399);border-radius:5px"></div>
+      </div>
+      <div style="font-size:12px;font-weight:800;width:36px;text-align:right">null%</div>
+    </div>
+    <div style="font-size:11px;color:#64748b;margin-bottom:12px;padding:4px 8px;background:#f8fafc;border-radius:6px">📎 中立</div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+      <div style="font-size:12px;color:#64748b;width:100px;flex-shrink:0">Myfxbook%</div>
+      <div style="flex:1;height:10px;background:#e2e8f0;border-radius:5px;overflow:hidden">
+        <div style="height:100%;width:50%;background:linear-gradient(90deg,#ff6b2b,#ffb800);border-radius:5px"></div>
+      </div>
+      <div style="font-size:12px;font-weight:800;width:36px;text-align:right">null%</div>
+    </div>
+    <div style="font-size:11px;color:#64748b;padding:4px 8px;background:#f8fafc;border-radius:6px">📎 中立</div>
+  </div>
+  <div class="card">
+    <div class="lbl">COT（機関投資家）</div>
+    <div style="padding:12px 14px;background:#e6f9f1;border-radius:12px;border:1.5px solid #86efac;margin-bottom:10px">
+      <div style="font-size:11px;font-weight:700;color:#00b96b;margin-bottom:2px">MM Net</div>
+      <div style="font-size:24px;font-weight:900;color:#00b96b">+197904</div>
+    </div>
+    <div style="font-size:11px;color:#64748b;padding:4px 8px;background:#f8fafc;border-radius:6px">
+      ネットポジションは機関投資家の方向感を示す
+    </div>
+  </div>
+</div>
+
+<!-- ⑭ 時間軸別整理 -->
+<div class="sh"><h2>⏱️ 時間軸別整理（短期・中期・長期）</h2></div>
+<span class="lbadge l4">時間軸</span>
+<div style="margin-top:10px;margin-bottom:14px"><div style="padding:14px 16px;background:#fff0ea;border:2px solid #ffccaa;
+          border-radius:14px;margin-bottom:12px">
+          <div style="font-size:14px;font-weight:800;color:#ff6b2b;margin-bottom:8px">⚡ 短期（数日）</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">支配因子</div>
+              <div style="font-size:12px;color:#1e293b;line-height:1.6">## 7. シナリオ分岐</div>
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">方向性バイアス</div>
+              <div style="font-size:13px;font-weight:700;color:#ff6b2b">-</div>
+            </div>
+          </div>
+        </div><div style="padding:14px 16px;background:#eff6ff;border:2px solid #93c5fd;
+          border-radius:14px;margin-bottom:12px">
+          <div style="font-size:14px;font-weight:800;color:#3b82f6;margin-bottom:8px">📅 中期（数週間〜2ヶ月）</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">支配因子</div>
+              <div style="font-size:12px;color:#1e293b;line-height:1.6">パル原液に詳細あり</div>
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">方向性バイアス</div>
+              <div style="font-size:13px;font-weight:700;color:#3b82f6">-</div>
+            </div>
+          </div>
+        </div><div style="padding:14px 16px;background:#f5f3ff;border:2px solid #ddd6fe;
+          border-radius:14px;margin-bottom:12px">
+          <div style="font-size:14px;font-weight:800;color:#8b5cf6;margin-bottom:8px">🌐 長期（3ヶ月〜）</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">支配因子</div>
+              <div style="font-size:12px;color:#1e293b;line-height:1.6">## 10. 前回からの変化</div>
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">方向性バイアス</div>
+              <div style="font-size:13px;font-weight:700;color:#8b5cf6">-</div>
+            </div>
+          </div>
+        </div></div>
+
+<!-- ⑮ Layer4: シナリオ分岐 -->
+<div class="sh"><h2>🔮 Layer 4 — シナリオ分岐</h2></div>
+<span class="lbadge l4">未来予測</span>
+<div style="margin-top:8px;margin-bottom:14px"><div style="padding:18px;border-radius:16px;border:2px solid #86efac;
+          background:#e6f9f1;margin-bottom:12px">
+          <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
+            <div style="text-align:center;min-width:60px">
+              <div style="font-size:34px;font-weight:900;line-height:1;color:#00b96b">40%</div>
+              <div style="font-size:10px;color:#64748b;margin-top:2px">前回 40%</div>
+              <div style="font-size:11px;font-weight:700;margin-top:2px"><span style="color:#94a3b8">変化なし</span></div>
+            </div>
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:14px;font-weight:800;color:#00b96b;margin-bottom:8px">🟢 シナリオA：強気シナリオ（上昇継続）</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#00b96b;margin-bottom:4px">▶ 発火条件</div>
+                  <ul style="list-style:none"><li style="margin-bottom:3px;font-size:12px">中国輸入さらに縮小、Prospective Plantings上振れ（>87M acres）、COTロング解消加速</li></ul>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#ff3d5a;margin-bottom:4px">✕ 否定条件</div>
+                  <ul style="list-style:none"><li style="margin-bottom:3px;font-size:12px">米中貿易協議再開</li></ul>
+                </div>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span style="background:#00b96b20;color:#00b96b;border:1px solid #00b96b40;
+                  padding:3px 10px;border-radius:20px;font-size:12px;font-weight:700">🎯 - 価格帯: 1080〜1140 ¢/bu</span>
+                <span style="background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:20px;font-size:11px">
+                  ⏱ 数日〜数週間</span>
+              </div>
+            </div>
+          </div>
+        </div><div style="padding:18px;border-radius:16px;border:2px solid #93c5fd;
+          background:#eff6ff;margin-bottom:12px">
+          <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
+            <div style="text-align:center;min-width:60px">
+              <div style="font-size:34px;font-weight:900;line-height:1;color:#3b82f6">40%</div>
+              <div style="font-size:10px;color:#64748b;margin-top:2px">前回 35%</div>
+              <div style="font-size:11px;font-weight:700;margin-top:2px"><span style="color:#00b96b">▲5%</span></div>
+            </div>
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:14px;font-weight:800;color:#3b82f6;margin-bottom:8px">🔵 シナリオB：中立シナリオ（レンジ継続）</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#3b82f6;margin-bottom:4px">▶ 発火条件</div>
+                  <ul style="list-style:none"><li style="margin-bottom:3px;font-size:12px">1145¢でサポート確認、バイオ燃料需要継続</li></ul>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#ff3d5a;margin-bottom:4px">✕ 否定条件</div>
+                  <ul style="list-style:none"><li style="font-size:12px;color:#94a3b8">パル原液に詳細あり</li></ul>
+                </div>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span style="background:#3b82f620;color:#3b82f6;border:1px solid #3b82f640;
+                  padding:3px 10px;border-radius:20px;font-size:12px;font-weight:700">🎯 - 価格帯: 1140〜1180 ¢/bu</span>
+                <span style="background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:20px;font-size:11px">
+                  ⏱ 1〜2週間</span>
+              </div>
+            </div>
+          </div>
+        </div><div style="padding:18px;border-radius:16px;border:2px solid #fca5a5;
+          background:#fff0f2;margin-bottom:12px">
+          <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
+            <div style="text-align:center;min-width:60px">
+              <div style="font-size:34px;font-weight:900;line-height:1;color:#ff3d5a">20%</div>
+              <div style="font-size:10px;color:#64748b;margin-top:2px">前回 25%</div>
+              <div style="font-size:11px;font-weight:700;margin-top:2px"><span style="color:#ff3d5a">▼5%</span></div>
+            </div>
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:14px;font-weight:800;color:#ff3d5a;margin-bottom:8px">🔴 シナリオC：弱気シナリオ（下落リスク）</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#ff3d5a;margin-bottom:4px">▶ 発火条件</div>
+                  <ul style="list-style:none"><li style="margin-bottom:3px;font-size:12px">米中貿易協議再開・関税緩和、ブラジル乾燥確認、Prospective Plantings下振れ</li><li style="margin-bottom:3px;font-size:12px">## 8. トレード判断トリガー</li></ul>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#ff3d5a;margin-bottom:4px">✕ 否定条件</div>
+                  <ul style="list-style:none"><li style="font-size:12px;color:#94a3b8">パル原液に詳細あり</li></ul>
+                </div>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span style="background:#ff3d5a20;color:#ff3d5a;border:1px solid #ff3d5a40;
+                  padding:3px 10px;border-radius:20px;font-size:12px;font-weight:700">🎯 - 価格帯: 1200〜1250 ¢/bu</span>
+                <span style="background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:20px;font-size:11px">
+                  ⏱ 数日〜数週間</span>
+              </div>
+            </div>
+          </div>
+        </div></div>
+
+<!-- ⑯ Layer5: トレード判断 -->
+<div class="sh"><h2>⚙️ Layer 5 — トレード判断</h2></div>
+<span class="lbadge l5">実戦接続</span>
+<div class="card" style="margin-top:8px">
+  <div style="padding:16px 20px;background:#fff0f2;border:2.5px solid #fca5a5;
+       border-radius:14px;margin-bottom:14px">
+    <div style="font-size:11px;font-weight:700;color:#ff3d5a;margin-bottom:6px">📌 今日の推奨アクション</div>
+    <div style="font-size:20px;font-weight:900;color:#ff3d5a;margin-bottom:8px">🔥 TRIGGER — ショート</div>
+    <div style="font-size:13px;color:#1e293b;line-height:1.6">スコア-2 / SHORT方向。主因: DEMAND DESTRUCTION。詳細はパル原液を確認してください。</div>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <div style="padding:8px 14px;background:#1e293b;border-radius:10px">
+      <div style="font-size:10px;color:#94a3b8;margin-bottom:2px">スコア</div>
+      <div style="font-size:14px;font-weight:800;color:#fff">-2</div>
+    </div>
+    <div style="padding:8px 14px;background:#1e293b;border-radius:10px">
+      <div style="font-size:10px;color:#94a3b8;margin-bottom:2px">方向</div>
+      <div style="font-size:14px;font-weight:800;color:#ff3d5a">SHORT</div>
+    </div>
+    <div style="padding:8px 14px;background:#1e293b;border-radius:10px">
+      <div style="font-size:10px;color:#94a3b8;margin-bottom:2px">レジーム</div>
+      <div style="font-size:12px;font-weight:700;color:#94a3b8">🌦️ 天候 主導</div>
+    </div>
+  </div>
+</div>
+
+<!-- ⑰ クロスマーケットパネル -->
+<div class="sh"><h2>🌐 クロスマーケット（リアルタイム）</h2></div>
+<div style="font-size:11px;color:var(--mu);margin-bottom:10px">
+  🟢同方向 / 🔴逆方向 = この銘柄への影響方向 ｜ Yahoo Finance リアルタイム
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin-bottom:16px">
+  <div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04)">
+      <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">ドル指数</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">100.36</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+0.76%</div>
+      <div style="font-size:10px;margin-top:5px">⚪ 中立</div>
+    </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04)">
+      <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">米10年金利</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">%4.440</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+1.09%</div>
+      <div style="font-size:10px;margin-top:5px">🔴 逆風</div>
+    </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04)">
+      <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">S&P500先物</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">6,452</div>
+      <div style="font-size:12px;font-weight:700;color:#ff3d5a;margin-top:4px">-2.84%</div>
+      <div style="font-size:10px;margin-top:5px">🔴 逆方向</div>
+    </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04)">
+      <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">恐怖指数</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">30.39</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+12.76%</div>
+      <div style="font-size:10px;margin-top:5px">🔴 逆風</div>
+    </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04)">
+      <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">金</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">$4,588</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+0.85%</div>
+      <div style="font-size:10px;margin-top:5px">🟢 同方向</div>
+    </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,.04)">
+      <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">WTI原油</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">$101.29</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+12.15%</div>
+      <div style="font-size:10px;margin-top:5px">🟢 同方向</div>
+    </div>
+</div>
+
+<!-- ⑱ フッター -->
+<div style="text-align:center;margin-top:30px;padding:16px 0;border-top:1px solid var(--bo)">
+  <a href="./index.html" style="display:inline-block;background:#1e293b;color:#94a3b8;
+     text-decoration:none;font-size:13px;font-weight:700;padding:10px 24px;
+     border-radius:20px;border:1.5px solid #334155;margin-bottom:14px">← ホームへ戻る</a>
+  <div style="font-size:11px;color:var(--mu)">
+    <p>📡 パル原液（Supabase）｜ 🤖 ジェン自動生成 ｜ 自動更新</p>
+    <p style="margin-top:4px">generate_all_pages.py v2.0 — 全18セクション対応</p>
+  </div>
+</div>
+
+</div><!-- /mw -->
+
 <script>
-new Chart(document.getElementById('c1').getContext('2d'),{type:'line',
-  data:{labels:["03-30"],datasets:[{data:[-2],borderColor:'#ff6b2b',
+new Chart(document.getElementById('c1').getContext('2d'),{
+  type:'line',
+  data:{labels:["03-30"],datasets:[{
+    data:[-2],borderColor:'#ff6b2b',
     backgroundColor:'rgba(255,107,43,0.1)',tension:0.3,fill:true,
-    pointBackgroundColor:'#ff6b2b',pointRadius:4,borderWidth:2.5}]},
-  options:{responsive:true,maintainAspectRatio:false,
+    pointBackgroundColor:'#ff6b2b',pointRadius:4,borderWidth:2.5
+  }]},
+  options:{
+    responsive:true,maintainAspectRatio:false,
     plugins:{legend:{display:false}},
-    scales:{y:{min:-10,max:10,grid:{color:'#f1f5f9'},ticks:{color:'#64748b',font:{size:11}}},
-             x:{grid:{display:false},ticks:{color:'#64748b',font:{size:10},maxRotation:45}}}}}
-  );
+    scales:{
+      y:{min:-10,max:10,grid:{color:'#f1f5f9'},ticks:{color:'#64748b',font:{size:11}}},
+      x:{grid:{display:false},ticks:{color:'#64748b',font:{size:10},maxRotation:45}}
+    }
+  }
+});
 </script>
 </body>
 </html>

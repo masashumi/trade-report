@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="refresh" content="1800">
+<title>📊 トレードダッシュボード — Masa</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#f0f4ff;font-family:'Segoe UI','Noto Sans JP',sans-serif;
+        color:#1e293b;padding:16px 12px 60px;min-height:100vh}
+  .mw{max-width:860px;margin:0 auto}
+  .nav{display:flex;align-items:center;gap:12px;background:#1e293b;border-radius:14px;
+        padding:12px 18px;margin-bottom:20px}
+  .nav a{color:#94a3b8;text-decoration:none;font-size:13px}
+  .nav a:hover{color:#f1f5f9}
+  .nav-title{font-size:15px;font-weight:800;color:#f1f5f9;margin-left:auto}
+  .header-card{background:linear-gradient(135deg,#1e293b,#334155);border-radius:16px;
+    padding:20px 22px;margin-bottom:20px;display:flex;align-items:center;gap:16px}
+  .live-dot{width:8px;height:8px;border-radius:50%;background:#00b96b;
+    animation:pulse 2s infinite;flex-shrink:0}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .update-info{font-size:11px;color:#94a3b8}
+</style>
+</head>
+<body>
+<div class="mw">
+  <nav class="nav">
+    <a href="./index.html">← ホーム</a>
+    <span style="color:#475569">|</span>
+    <span style="font-size:13px;color:#94a3b8">全銘柄まとめ</span>
+    <span class="nav-title">📊 ダッシュボード</span>
+  </nav>
+  <div class="header-card">
+    <div class="live-dot"></div>
+    <div>
+      <div style="font-size:18px;font-weight:900;color:#f1f5f9">全銘柄スコア一覧</div>
+      <div class="update-info">🕐 生成: 2026/3/30 21:58 JST · パル原液 × ジェン自動生成 · 14銘柄</div>
+    </div>
+  </div>
+  <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#64748b;margin:24px 0 10px;text-transform:uppercase">⚡ エネルギー</div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./oil_news.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">🛢️</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">原油（WTI/Brent）</div>
+                    <div style="font-size:11px;color:#64748b">- · 101.38</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#00b96b">+2</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#e6f9f1;color:#00b96b;border:1px solid #86efac">🔥 TRIGGER LONG</span>
+                <span style="font-size:10px;font-weight:700;color:#00b96b">▲1</span>
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">フーシー参戦・米特殊部隊展開でリスクプレミアム拡大</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🌍 地政学</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:100%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+3</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📦 需給</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">💹 マクロ</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:67%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-2</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:67%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+2</span></div></div>
+            </div>
+          </div>
+        </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./natural_gas_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">⛽</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">天然ガス</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 3.015</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#64748b">0</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#f8fafc;color:#64748b;border:1px solid #e2e8f0">👀 WATCH</span>
+                <span style="font-size:10px;font-weight:700;color:#00b96b">▲1</span>
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">LNG輸出継続+イラン戦争代替需要でsupply_demand 0→+1</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🌦️ 天候</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📦 需給</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:33%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">💹 マクロ</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:33%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+1</span></div></div>
+            </div>
+          </div>
+        </div><div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#64748b;margin:24px 0 10px;text-transform:uppercase">🌾 穀物・ソフト</div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./wheat_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">🌾</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">小麦</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 605.00</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#00b96b">+1</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#f8fafc;color:#64748b;border:1px solid #e2e8f0">👀 WATCH</span>
+                <span style="font-size:10px;font-weight:700;color:#ff3d5a">▼2</span>
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">競合国豊作・輸出競争力低下でweather+supply_demand各-1ポイント</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🌦️ 天候</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:67%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+2</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📦 需給</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:33%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">💹 マクロ</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div>
+            </div>
+          </div>
+        </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./corn_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">🌽</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">トウモロコシ</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 462.00</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#64748b">0</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#f8fafc;color:#64748b;border:1px solid #e2e8f0">👀 WATCH</span>
+                <span style="font-size:10px;font-weight:700;color:#ff3d5a">▼1</span>
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">グローバル在庫高水準継続でsupply_demand +1→0</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🌦️ 天候</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#f1f5f9;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#f1f5f9;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#94a3b8;width:22px;text-align:right">0</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📦 需給</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#f1f5f9;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#f1f5f9;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#94a3b8;width:22px;text-align:right">0</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">💹 マクロ</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:33%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+1</span></div></div>
+            </div>
+          </div>
+        </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./soybean_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">🫘</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">大豆</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 1163.00</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#ff3d5a">-2</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5">🔥 TRIGGER SHORT</span>
+                <span style="font-size:10px;font-weight:700;color:#00b96b">▲1</span>
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">crush需要増加・バイオ燃料支援でsupply_demand -2→-1</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🌦️ 天候</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📦 需給</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">💹 マクロ</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:33%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+1</span></div></div>
+            </div>
+          </div>
+        </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./sugar_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">🍬</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">砂糖</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 15.76</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#ff3d5a">-1</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#fff7ed;color:#f97316;border:1px solid #fed7aa">🟡 PREPARE SHORT</span>
+                <span style="font-size:10px;font-weight:700;color:#00b96b">▲1</span>
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">原油WTI$101急騰でエタノール代替価値が上昇、macro 0→+1</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🌦️ 天候</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#f1f5f9;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#f1f5f9;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#94a3b8;width:22px;text-align:right">0</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📦 需給</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">💹 マクロ</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:33%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div>
+            </div>
+          </div>
+        </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./cocoa_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">🍫</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">カカオ</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 3136.00</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#ff3d5a">-4</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5">🔥 TRIGGER SHORT</span>
+                
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">変化なし（ブラジル農場投資停止は長期材料のみ）</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🌦️ 天候</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#f1f5f9;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#f1f5f9;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#94a3b8;width:22px;text-align:right">0</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📦 需給</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:67%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-2</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">💹 マクロ</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div>
+            </div>
+          </div>
+        </div><div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#64748b;margin:24px 0 10px;text-transform:uppercase">📊 インデックス</div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./sp500_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">📊</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">S&amp;P500</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 6368.85</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#ff3d5a">-8</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5">🔥 TRIGGER SHORT</span>
+                
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">変化なし（イラン戦争継続・VIX高止まり・企業業績悪化懸念全て不変）</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">💹 マクロ</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:67%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-2</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">💰 企業業績</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">⚡ リスク</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:100%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-3</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:67%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-2</span></div></div>
+            </div>
+          </div>
+        </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./vix_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">😨</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">VIX（恐怖指数）</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 30.55</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#00b96b">+8</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#e6f9f1;color:#00b96b;border:1px solid #86efac">🔥 TRIGGER LONG</span>
+                
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">変化なし（イラン戦争継続・スタグフレーション懸念・高VIX環境全て不変）</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">💹 マクロ</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:67%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+2</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">⚡ リスク</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:100%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+3</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📅 イベント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:33%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:67%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+2</span></div></div>
+            </div>
+          </div>
+        </div><div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#64748b;margin:24px 0 10px;text-transform:uppercase">₿ 暗号資産</div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./bitcoin_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">₿</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">ビットコイン</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 67216.00</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#ff3d5a">-1</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#fff7ed;color:#f97316;border:1px solid #fed7aa">🟡 PREPARE SHORT</span>
+                <span style="font-size:10px;font-weight:700;color:#ff3d5a">▼2</span>
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">ETFフロー流出継続でflow 0→-1、予測市場センチメント悪化でsentiment +1→0</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">⚖️ 規制</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:33%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">💸 資金フロー</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">💹 マクロ</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#f1f5f9;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#f1f5f9;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#94a3b8;width:22px;text-align:right">0</span></div></div>
+            </div>
+          </div>
+        </div><div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#64748b;margin:24px 0 10px;text-transform:uppercase">💱 FX</div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./dxy_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">💵</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">ドル指数（DXY）</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 100.17</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#00b96b">+4</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#e6f9f1;color:#00b96b;border:1px solid #86efac">🔥 TRIGGER LONG</span>
+                
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">変化なし（リスクオフ・金利差・sentiment全ファクター不変）</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📐 金利差</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:33%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🏦 政策</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#f1f5f9;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#f1f5f9;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#94a3b8;width:22px;text-align:right">0</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">⚡ リスク</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:67%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+2</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:33%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+1</span></div></div>
+            </div>
+          </div>
+        </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./usdjpy_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">💴</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">USD/JPY</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 159.77</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#00b96b">+1</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#f8fafc;color:#64748b;border:1px solid #e2e8f0">👀 WATCH</span>
+                
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">変化なし（金利差・政策・リスク・センチメント全ファクター不変）</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📐 金利差</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:67%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+2</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🏦 政策</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:33%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">⚡ リスク</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div>
+            </div>
+          </div>
+        </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./usdcnh_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">🇨🇳</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">USD/CNH</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 7.0679</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#ff3d5a">-1</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#f8fafc;color:#64748b;border:1px solid #e2e8f0">👀 WATCH</span>
+                
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">変化なし（金利差・政策・リスク・センチメント全ファクター不変）</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📐 金利差</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🏦 政策</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:33%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">⚡ リスク</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#f1f5f9;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#f1f5f9;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#94a3b8;width:22px;text-align:right">0</span></div></div>
+            </div>
+          </div>
+        </div><div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#64748b;margin:24px 0 10px;text-transform:uppercase">🌐 マクロ</div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 16px;
+            margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px">
+            <!-- 左: 銘柄・スコア・アクション -->
+            <div style="min-width:180px;flex:0 0 auto">
+              <a href="./us_rates_page.html" style="text-decoration:none;color:inherit">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <span style="font-size:22px">📈</span>
+                  <div>
+                    <div style="font-size:14px;font-weight:800;color:#1e293b">米国金利</div>
+                    <div style="font-size:11px;color:#64748b">03/30 20:35 · 4.40</div>
+                  </div>
+                </div>
+              </a>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:20px;font-weight:900;color:#64748b">0</span>
+                <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;
+                  background:#f8fafc;color:#64748b;border:1px solid #e2e8f0">👀 WATCH</span>
+                
+              </div>
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">変化なし（Fed据え置き・インフレ高止まり・成長懸念のトレードオフ不変）</div>
+            </div>
+            <!-- 右: ファクターミニグラフ -->
+            <div style="flex:1;min-width:200px">
+              <div style="font-size:9px;color:#94a3b8;margin-bottom:5px;display:flex;gap:4px;padding-left:96px">
+                <div style="flex:1;text-align:center;font-size:9px">◀ マイナス</div>
+                <div style="width:1px"></div>
+                <div style="flex:1;text-align:center;font-size:9px">プラス ▶</div>
+                <div style="width:22px"></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🏦 Fed政策</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📊 インフレ</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#e8f5f0;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;display:flex"><div style="width:67%;height:8px;background:#00b96b;border-radius:0 4px 4px 0"></div></div></div><span style="font-size:11px;font-weight:800;color:#00b96b;width:22px;text-align:right">+2</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">📈 成長</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;display:flex;justify-content:flex-end"><div style="width:33%;height:8px;background:#ff3d5a;border-radius:4px 0 0 4px"></div></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#ffeef0;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#ff3d5a;width:22px;text-align:right">-1</span></div></div><div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><div style="font-size:10px;color:#64748b;width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">😊 センチメント</div><div style="display:flex;align-items:center;gap:4px;margin-bottom:4px"><div style="display:flex;align-items:center;width:120px;flex-shrink:0"><div style="flex:1;height:8px;background:#f1f5f9;border-radius:4px 0 0 4px"></div><div style="width:1px;background:#94a3b8;flex-shrink:0"></div><div style="flex:1;height:8px;background:#f1f5f9;border-radius:0 4px 4px 0"></div></div><span style="font-size:11px;font-weight:800;color:#94a3b8;width:22px;text-align:right">0</span></div></div>
+            </div>
+          </div>
+        </div>
+  <div style="text-align:center;margin-top:32px;font-size:11px;color:#94a3b8">
+    <a href="./index.html" style="color:#64748b;text-decoration:none">← ホームへ戻る</a>
+    &nbsp;·&nbsp; 各銘柄名をクリックで詳細ページへ
+  </div>
+</div>
+</body>
+</html>

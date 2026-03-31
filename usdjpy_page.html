@@ -51,10 +51,10 @@
 <!-- ② UPDATEバー -->
 <div style="background:var(--w);border:1.5px solid var(--bo);border-radius:10px;padding:8px 14px;
      margin-bottom:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;font-size:11px;color:var(--mu)">
-  <span>📡 パル原液: <strong style="color:var(--tx)">2026/3/31 17:10 JST</strong></span>
-  <span>🤖 生成: <strong style="color:var(--tx)">2026/3/31 20:46 JST</strong></span>
+  <span>📡 パル原液: <strong style="color:var(--tx)">2026/3/31 23:10 JST</strong></span>
+  <span>🤖 生成: <strong style="color:var(--tx)">2026/4/1 00:00 JST</strong></span>
   <span style="color:var(--gr);font-weight:700">● 自動更新中（30分）</span>
-  <span style="color:var(--bl)">蓄積: 3件 (2026-03-30〜)</span>
+  <span style="color:var(--bl)">蓄積: 4件 (2026-03-30〜)</span>
 </div>
 
 <!-- ③ EXECUTIVE STRIP -->
@@ -63,12 +63,12 @@
   <div style="flex:1;min-width:160px">
     <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:#94a3b8;margin-bottom:6px">TODAY'S VERDICT</div>
     <div style="font-size:20px;font-weight:900;color:#fff;margin-bottom:4px">👀 WATCH — 様子見</div>
-    <div style="font-size:12px;color:#94a3b8">主因: MIXED NO CLEAR DRIVER</div>
+    <div style="font-size:12px;color:#94a3b8">主因: POLICY RISK</div>
   </div>
   <div style="display:flex;gap:10px;flex-wrap:wrap">
     <div style="background:#ffffff15;border:1px solid #ffffff20;border-radius:12px;padding:10px 14px;text-align:center;min-width:70px">
       <div style="font-size:10px;color:#94a3b8;margin-bottom:4px">スコア</div>
-      <div style="font-size:24px;font-weight:900;color:#00b96b">+3</div>
+      <div style="font-size:24px;font-weight:900;color:#ff3d5a">-1</div>
     </div>
     <div style="background:#ffffff15;border:1px solid #ffffff20;border-radius:12px;padding:10px 14px;text-align:center;min-width:90px">
       <div style="font-size:10px;color:#94a3b8;margin-bottom:4px">価格</div>
@@ -86,14 +86,29 @@
 <div style="background:linear-gradient(135deg,#fff7ed,#fef3c7);border:2px solid #fed7aa;border-radius:14px;
      padding:14px 18px;margin-bottom:16px">
   <div style="font-size:11px;font-weight:700;color:var(--or);margin-bottom:8px">📖 初見の方へ — 今何が起きているか（3行）</div>
-  <div style="font-size:13px;color:var(--tx);line-height:1.7"><div style="margin-bottom:6px">① USD/JPYの環境スコアは現在 <strong style="color:#64748b">+3</strong>（NEUTRAL方向）。</div><div style="margin-bottom:6px">② 主要ドライバーは 📐 金利差・🏦 政策。スコア変化: 変化なし。</div><div style="margin-bottom:6px">③ 現在の推奨アクション: <strong>👀 WATCH — 様子見</strong>。無効条件の監視を継続。</div></div>
+  <div style="font-size:13px;color:var(--tx);line-height:1.7"><div style="margin-bottom:6px">① USDJPY 159.69（-0.02%）</div><div style="margin-bottom:6px">② score=-1（前回+3→-4）</div><div style="margin-bottom:6px">③ BOJ「decisive」介入警告でpolicy=-1、IG long 28%低水準</div></div>
 </div>
 
 <!-- ⑤ Layer0: イベントログ -->
 <div class="sh"><h2>📖 Layer 0 — イベントログ（スコア変化の記録）</h2></div>
 <span class="lbadge l0">イベントログ（動的）</span>
 <div class="card" style="margin-top:8px">
-  <div style="position:relative;padding-left:24px"><p style="font-size:13px;color:#94a3b8;padding:8px 0">スコア変化イベントなし（データ蓄積中）</p></div>
+  <div style="position:relative;padding-left:24px"><div style="display:flex;gap:14px;margin-bottom:0">
+              <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0">
+                <div style="width:12px;height:12px;border-radius:50%;background:#ff3d5a;
+                  border:3px solid #fff;box-shadow:0 0 0 2px #ff3d5a;margin-top:2px"></div>
+                
+              </div>
+              <div style="flex:1">
+                <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px">
+                  <span style="background:#ff3d5a;color:#fff;padding:2px 8px;border-radius:10px;
+                    font-size:10px;font-weight:700">SCORE▼4</span>
+                  <span style="font-size:11px;color:#64748b;font-weight:600">2026-03-31</span>
+                  <span style="color:#00b96b;font-size:10px;font-weight:700">● 継続中</span>
+                </div>
+                <div style="font-size:13px;color:#1e293b;line-height:1.6">スコア -4 変化 — BOJ「decisive」介入警告激化・160超え失敗。policy=-1、sentiment=-1(IG low 28%+COT円ショート縮小兆候)</div>
+              </div>
+            </div></div>
   <div style="margin-top:10px;font-size:11px;color:var(--mu);background:#f8fafc;padding:6px 10px;border-radius:8px">
     ▲スコア上昇 ▼スコア下降 ｜ スコア変化があった日のみ表示（固定イベントなし）
   </div>
@@ -107,20 +122,27 @@
     <div>
       <div style="font-size:11px;font-weight:700;color:var(--or);margin-bottom:6px">スコア合計</div>
       <div style="background:var(--or);color:#fff;font-size:30px;font-weight:900;
-           padding:8px 16px;border-radius:12px;display:inline-block;box-shadow:0 4px 12px rgba(255,107,43,.3)">+3</div>
-      <div style="font-size:11px;color:var(--mu);margin-top:6px">前回: 0</div>
+           padding:8px 16px;border-radius:12px;display:inline-block;box-shadow:0 4px 12px rgba(255,107,43,.3)">-1</div>
+      <div style="font-size:11px;color:var(--mu);margin-top:6px">前回: +3</div>
       <div style="font-size:11px;color:var(--mu);margin-top:2px">📐 金利差 主導</div>
     </div>
-    <div style="flex:1;min-width:200px;padding-top:4px"><div style="font-size:10px;color:#94a3b8;display:flex;margin-bottom:6px;margin-left:160px"><div style="flex:1;text-align:center">← マイナス</div><div style="width:2px"></div><div style="flex:1;text-align:center">プラス →</div></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">📐 金利差</div><div style="flex:1;min-width:0"><div style="display:flex;align-items:center;height:12px;width:100%"><div style="flex:1;height:12px;background:#f1f5f9;border-radius:5px 0 0 5px"></div><div style="width:2px;background:#cbd5e1;flex-shrink:0"></div><div style="flex:1;height:12px;display:flex;align-items:center"><div style="width:67%;height:12px;background:linear-gradient(90deg,#00b96b,#34d399);border-radius:0 5px 5px 0"></div></div></div></div><div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#00b96b">+2</div></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">🏦 政策</div><div style="flex:1;min-width:0"><div style="display:flex;align-items:center;height:12px;width:100%"><div style="flex:1;height:12px;background:#f1f5f9;border-radius:5px 0 0 5px"></div><div style="width:2px;background:#cbd5e1;flex-shrink:0"></div><div style="flex:1;height:12px;background:#f1f5f9;border-radius:0 5px 5px 0"></div></div></div><div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#94a3b8">0</div></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">⚡ リスク</div><div style="flex:1;min-width:0"><div style="display:flex;align-items:center;height:12px;width:100%"><div style="flex:1;height:12px;background:#f1f5f9;border-radius:5px 0 0 5px"></div><div style="width:2px;background:#cbd5e1;flex-shrink:0"></div><div style="flex:1;height:12px;background:#f1f5f9;border-radius:0 5px 5px 0"></div></div></div><div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#94a3b8">0</div></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">😊 センチメント</div><div style="flex:1;min-width:0"><div style="display:flex;align-items:center;height:12px;width:100%"><div style="flex:1;height:12px;background:#f1f5f9;border-radius:5px 0 0 5px"></div><div style="width:2px;background:#cbd5e1;flex-shrink:0"></div><div style="flex:1;height:12px;display:flex;align-items:center"><div style="width:33%;height:12px;background:linear-gradient(90deg,#00b96b,#34d399);border-radius:0 5px 5px 0"></div></div></div></div><div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#00b96b">+1</div></div></div>
+    <div style="flex:1;min-width:200px;padding-top:4px"><div style="font-size:10px;color:#94a3b8;display:flex;margin-bottom:6px;margin-left:160px"><div style="flex:1;text-align:center">← マイナス</div><div style="width:2px"></div><div style="flex:1;text-align:center">プラス →</div></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">📐 金利差</div><div style="flex:1;min-width:0"><div style="display:flex;align-items:center;height:12px;width:100%"><div style="flex:1;height:12px;background:#f1f5f9;border-radius:5px 0 0 5px"></div><div style="width:2px;background:#cbd5e1;flex-shrink:0"></div><div style="flex:1;height:12px;display:flex;align-items:center"><div style="width:33%;height:12px;background:linear-gradient(90deg,#00b96b,#34d399);border-radius:0 5px 5px 0"></div></div></div></div><div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#00b96b">+1</div></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">🏦 政策</div><div style="flex:1;min-width:0"><div style="display:flex;align-items:center;height:12px;width:100%"><div style="flex:1;height:12px;display:flex;align-items:center;justify-content:flex-end"><div style="width:33%;height:12px;background:linear-gradient(270deg,#ff3d5a,#fb7185);border-radius:5px 0 0 5px"></div></div><div style="width:2px;background:#cbd5e1;flex-shrink:0"></div><div style="flex:1;height:12px;background:#f1f5f9;border-radius:0 5px 5px 0"></div></div></div><div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#ff3d5a">-1</div></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">⚡ リスク</div><div style="flex:1;min-width:0"><div style="display:flex;align-items:center;height:12px;width:100%"><div style="flex:1;height:12px;background:#f1f5f9;border-radius:5px 0 0 5px"></div><div style="width:2px;background:#cbd5e1;flex-shrink:0"></div><div style="flex:1;height:12px;background:#f1f5f9;border-radius:0 5px 5px 0"></div></div></div><div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#94a3b8">0</div></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="font-size:12px;font-weight:600;width:140px;flex-shrink:0">😊 センチメント</div><div style="flex:1;min-width:0"><div style="display:flex;align-items:center;height:12px;width:100%"><div style="flex:1;height:12px;display:flex;align-items:center;justify-content:flex-end"><div style="width:33%;height:12px;background:linear-gradient(270deg,#ff3d5a,#fb7185);border-radius:5px 0 0 5px"></div></div><div style="width:2px;background:#cbd5e1;flex-shrink:0"></div><div style="flex:1;height:12px;background:#f1f5f9;border-radius:0 5px 5px 0"></div></div></div><div style="font-size:14px;font-weight:900;width:32px;text-align:right;color:#ff3d5a">-1</div></div></div>
   </div>
-  <div style="font-size:13px;color:#94a3b8;padding:6px 0">前回比：変化なし</div>
+  <div style="display:flex;align-items:flex-start;gap:10px;padding:12px 16px;
+          background:#fff0f2;border-radius:12px;border:1.5px solid #fca5a5;margin-top:12px">
+          <span style="font-size:20px;font-weight:900;color:#ff3d5a">▼4</span>
+          <div>
+            <div style="font-size:12px;font-weight:700;color:#ff3d5a">前回比スコア変化</div>
+            <div style="font-size:13px;color:#1e293b;margin-top:2px">BOJ「decisive」介入警告激化・160超え失敗。policy=-1、sentiment=-1(IG low 28%+COT円ショート縮小兆候)</div>
+          </div>
+        </div>
 </div>
 
 <!-- ⑦ スコア根拠テーブル -->
 <div class="card">
   <div class="lbl">📊 スコア根拠テーブル（なぜこの数字か）</div>
   <details style="margin-bottom:10px">
-          <summary>📐 金利差: <strong style="color:#00b96b">+2</strong></summary>
+          <summary>📐 金利差: <strong style="color:#00b96b">+1</strong></summary>
           <div style="overflow-x:auto;margin-top:8px">
       <table style="width:100%;border-collapse:collapse;font-size:12px">
         <thead><tr style="background:#f8fafc">
@@ -128,18 +150,24 @@
           <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">根拠（raw_content抽出）</th>
         </tr></thead>
         <tbody><tr>
-          <td style="font-weight:800;color:#00b96b;padding:5px 8px;white-space:nowrap">+1</td>
-          <td style="padding:5px 8px;font-size:12px;line-height:1.5">【価格】USD/JPY 159.686（3/31終値方向）| 前回17:00比 159.72→159.686=-0.034。日中レンジ159.668-159.973。3/30ピーク160.461（2026年最高値）後反落。【スコア分解】ra</td>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">rate_diff: +1（前回+2→-1変化）: Fed 3.75%維持だが、Powell「供給ショックlook through」発言で利下げ期待一部回帰。米中金利差は依然2.9〜3.0%幅だが縮小傾向。</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">中期(1-3ヶ月): 金利差縮小+BOJ正常化→円強含み方向。</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">長期: 米日金利差次第。Fed利下げ+BOJ利上げが円高の構造ドライバー。</td>
         </tr></tbody>
         <tfoot><tr style="border-top:2px solid #e2e8f0">
           <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#00b96b">
-            合計: +2
+            合計: +1
           </td>
         </tr></tfoot>
       </table>
     </div>
         </details><details style="margin-bottom:10px">
-          <summary>🏦 政策: <strong style="color:#94a3b8">0</strong></summary>
+          <summary>🏦 政策: <strong style="color:#ff3d5a">-1</strong></summary>
           <div style="overflow-x:auto;margin-top:8px">
       <table style="width:100%;border-collapse:collapse;font-size:12px">
         <thead><tr style="background:#f8fafc">
@@ -147,12 +175,21 @@
           <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">根拠（raw_content抽出）</th>
         </tr></thead>
         <tbody><tr>
-          <td style="font-weight:800;color:#00b96b;padding:5px 8px;white-space:nowrap">+1</td>
-          <td style="padding:5px 8px;font-size:12px;line-height:1.5">【価格】USD/JPY 159.686（3/31終値方向）| 前回17:00比 159.72→159.686=-0.034。日中レンジ159.668-159.973。3/30ピーク160.461（2026年最高値）後反落。【スコア分解】ra</td>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">rate_diff: +1（前回+2→-1変化）: Fed 3.75%維持だが、Powell「供給ショックlook through」発言で利下げ期待一部回帰。米中金利差は依然2.9〜3.0%幅だが縮小傾向。</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">policy: -1（前回0→-1変化）: Mimura通貨当局が「decisive」措置を初めて明言。Ueda総裁も「円動向が政策判断に大きく影響」と言及。4/27-28BOJ会合前に利上げ観測再浮上。3/19会合では8-1で0.75%維</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">4/27-28 BOJ会合: 議事要旨では「早期追加利上げ」を支持するメンバーも。</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">Fed 3.75%。Powell「tariff→one-time price bump」発言で利上げ確率低下（3%）。DXY 100.25で弱含み。米国経済は中東戦争の影響を精査中。ISM/JOLTS待ち。</td>
         </tr></tbody>
         <tfoot><tr style="border-top:2px solid #e2e8f0">
-          <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#94a3b8">
-            合計: 0
+          <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#ff3d5a">
+            合計: -1
           </td>
         </tr></tfoot>
       </table>
@@ -166,8 +203,17 @@
           <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">根拠（raw_content抽出）</th>
         </tr></thead>
         <tbody><tr>
-          <td style="font-weight:800;color:#00b96b;padding:5px 8px;white-space:nowrap">+1</td>
-          <td style="padding:5px 8px;font-size:12px;line-height:1.5">【価格】USD/JPY 159.686（3/31終値方向）| 前回17:00比 159.72→159.686=-0.034。日中レンジ159.668-159.973。3/30ピーク160.461（2026年最高値）後反落。【スコア分解】ra</td>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">risk: 0（変化なし）: 中東戦争でリスクオフドル高 vs 円がリスク回避通貨として一部機能。両力が拮抗。</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">日本からの輸出ドル売りフロー継続。中東原油高で日本の輸入コスト増大→需給的な円売り圧力。ただし160超えでのリアルマネー円買いも散見。政府年金（GPIF）の為替ヘッジ動向注視。</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">BOJ介入リスク最高水準: Mimura「decisive」発言は2024年介入前の最終警告に類似。日本外貨準備1.3兆ドル超。</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">⛔回避: 急激な中東エスカレーション時（ドル急騰リスク）</td>
         </tr></tbody>
         <tfoot><tr style="border-top:2px solid #e2e8f0">
           <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#94a3b8">
@@ -177,7 +223,7 @@
       </table>
     </div>
         </details><details style="margin-bottom:10px">
-          <summary>😊 センチメント: <strong style="color:#00b96b">+1</strong></summary>
+          <summary>😊 センチメント: <strong style="color:#ff3d5a">-1</strong></summary>
           <div style="overflow-x:auto;margin-top:8px">
       <table style="width:100%;border-collapse:collapse;font-size:12px">
         <thead><tr style="background:#f8fafc">
@@ -185,12 +231,21 @@
           <th style="padding:5px 8px;text-align:left;color:#64748b;font-weight:700">根拠（raw_content抽出）</th>
         </tr></thead>
         <tbody><tr>
-          <td style="font-weight:800;color:#00b96b;padding:5px 8px;white-space:nowrap">+1</td>
-          <td style="padding:5px 8px;font-size:12px;line-height:1.5">【価格】USD/JPY 159.686（3/31終値方向）| 前回17:00比 159.72→159.686=-0.034。日中レンジ159.668-159.973。3/30ピーク160.461（2026年最高値）後反落。【スコア分解】ra</td>
+          <td style="font-weight:800;color:#ff3d5a;padding:5px 8px;white-space:nowrap">-1</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">sentiment: -1（前回+1→-2変化）: IG long 28%（超少数がロング=逆張り的中立〜弱気）。COT lev_net=-54852（円ショートが大幅超過だが、前回比でショート-11,759縮小傾向）。</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">【6. センチメント/フロー（4層評価）】</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">2.COT（中長期バイアス）: lev_net=-54852（円ショート優位継続）。ただし直近週でショート-11,759の縮小はトレンド転換の前触れかも。</td>
+        </tr><tr>
+          <td style="font-weight:800;color:#94a3b8;padding:5px 8px;white-space:nowrap">±0</td>
+          <td style="padding:5px 8px;font-size:12px;line-height:1.5">3.IG（短期逆張り補助）: long=28%。超ロング不足→これ自体は逆張り観点で追加ドル高材料だが、BOJ介入が頭上圧力として機能。</td>
         </tr></tbody>
         <tfoot><tr style="border-top:2px solid #e2e8f0">
-          <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#00b96b">
-            合計: +1
+          <td colspan="2" style="padding:5px 8px;text-align:right;font-weight:800;color:#ff3d5a">
+            合計: -1
           </td>
         </tr></tfoot>
       </table>
@@ -204,7 +259,7 @@
 <!-- ⑧ パル要約 -->
 <div class="sh"><h2>📝 パル要約</h2></div>
 <div class="card">
-  <ul style="list-style:none"><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">USD/JPY 159。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">BOJ3月0。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">75%据え置き、次回利上げは「見通し実現なら」スタンス。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">金利差552bpでドル高継続だが160近辺で介入リスク高く方向感は中立。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">COT円ショート-54,852継続。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">スコア+3（前回比変化なし）。</li></ul>
+  <ul style="list-style:none"><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">USDJPY 159。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">score=-1（前回+3→-4）。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">BOJ「decisive」介入警告でpolicy=-1、IG long 28%低水準。</li><li style="padding:7px 0;border-bottom:1px solid #e2e8f0;font-size:13px;line-height:1.65">160節目での上値失敗継続、4/27-28BOJ会合が次の重大イベント。</li></ul>
 </div>
 
 <!-- ⑨ Layer1.5: 重要ニュース -->
@@ -215,9 +270,41 @@
               <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:6px">
                 <span style="background:#00b96b;color:#fff;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700">📈 Bullish</span>
                 <span style="background:#ff3d5a20;color:#ff3d5a;border:1px solid #ff3d5a40;padding:1px 6px;border-radius:8px;font-size:10px;font-weight:700">T1</span>
+                <span style="font-size:10px;color:#64748b">一般</span>
+              </div>
+              <div style="font-size:13px;color:#1e293b;line-height:1.6">現在値: 159.686（3/31終値）。前日比: -0.034 (-0.02%)。高値: 159.973、安値: 159.668。週間レンジ: 159.329〜160.461。3/30に160.461の18ヶ月高値を記録後、BOJ介入警告で押し戻し。160節</div>
+            </div><div style="padding:12px 14px;background:#fff0ea;border:1.5px solid #ffccaa;
+              border-radius:12px;margin-bottom:10px">
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                <span style="background:#f97316;color:#fff;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700">↔️ Mixed</span>
+                <span style="background:#ff3d5a20;color:#ff3d5a;border:1px solid #ff3d5a40;padding:1px 6px;border-radius:8px;font-size:10px;font-weight:700">T1</span>
                 <span style="font-size:10px;color:#64748b">📐 金利差</span>
               </div>
-              <div style="font-size:13px;color:#1e293b;line-height:1.6">【価格】USD/JPY 159.686（3/31終値方向）| 前回17:00比 159.72→159.686=-0.034。日中レンジ159.668-159.973。3/30ピーク160.461（2026年最高値）後反落。【スコア分解】rate_diff:+2</div>
+              <div style="font-size:13px;color:#1e293b;line-height:1.6">rate_diff: +1（前回+2→-1変化）: Fed 3.75%維持だが、Powell「供給ショックlook through」発言で利下げ期待一部回帰。米中金利差は依然2.9〜3.0%幅だが縮小傾向。</div>
+            </div><div style="padding:12px 14px;background:#fff0ea;border:1.5px solid #ffccaa;
+              border-radius:12px;margin-bottom:10px">
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                <span style="background:#f97316;color:#fff;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700">↔️ Mixed</span>
+                <span style="background:#ff3d5a20;color:#ff3d5a;border:1px solid #ff3d5a40;padding:1px 6px;border-radius:8px;font-size:10px;font-weight:700">T1</span>
+                <span style="font-size:10px;color:#64748b">⚡ リスク</span>
+              </div>
+              <div style="font-size:13px;color:#1e293b;line-height:1.6">BOJ介入リスク最高水準: Mimura「decisive」発言は2024年介入前の最終警告に類似。日本外貨準備1.3兆ドル超。</div>
+            </div><div style="padding:12px 14px;background:#fff0ea;border:1.5px solid #ffccaa;
+              border-radius:12px;margin-bottom:10px">
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                <span style="background:#f97316;color:#fff;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700">↔️ Mixed</span>
+                <span style="background:#ff3d5a20;color:#ff3d5a;border:1px solid #ff3d5a40;padding:1px 6px;border-radius:8px;font-size:10px;font-weight:700">T1</span>
+                <span style="font-size:10px;color:#64748b">🏦 政策</span>
+              </div>
+              <div style="font-size:13px;color:#1e293b;line-height:1.6">4/27-28 BOJ会合: 議事要旨では「早期追加利上げ」を支持するメンバーも。</div>
+            </div><div style="padding:12px 14px;background:#fff0ea;border:1.5px solid #ffccaa;
+              border-radius:12px;margin-bottom:10px">
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+                <span style="background:#f97316;color:#fff;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700">↔️ Mixed</span>
+                <span style="background:#ff3d5a20;color:#ff3d5a;border:1px solid #ff3d5a40;padding:1px 6px;border-radius:8px;font-size:10px;font-weight:700">T1</span>
+                <span style="font-size:10px;color:#64748b">一般</span>
+              </div>
+              <div style="font-size:13px;color:#1e293b;line-height:1.6">🟡観察: BOJ4/27-28会合声明待ち</div>
             </div></div>
 
 <!-- ⑩ Bull/Bear 因果チェーン -->
@@ -225,11 +312,11 @@
   <div class="lbl">🔗 因果チェーン（Bull / Bear）</div>
   <div style="margin-bottom:12px">
     <div style="font-size:12px;font-weight:700;color:#00b96b;margin-bottom:6px">📈 Bull Chain（強気シナリオの連鎖）</div>
-    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:3px"><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">金利差拡大</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">緩和政策維持</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">リスクプレミアム低下</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">機関投資家の買い増し</div></div></div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:3px"><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">スタグフレーション懸念</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">金利差拡大</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">緩和政策維持</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">リスクプレミアム低下</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#00b96b;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">機関投資家の買い増し</div></div></div>
   </div>
   <div>
     <div style="font-size:12px;font-weight:700;color:#ff3d5a;margin-bottom:6px">📉 Bear Chain（弱気シナリオの連鎖）</div>
-    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:3px"><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">金利差縮小</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">引き締め政策</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">リスクオフ・ボラ拡大</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">センチメント悪化</div></div></div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:3px"><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">sentiment</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">Polymarket</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">金利差縮小</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">引き締め政策</div><div style="font-size:14px;color:#94a3b8;margin:0 2px">→</div></div><div style="display:flex;align-items:center"><div style="background:#ff3d5a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap">リスクオフ・ボラ拡大</div></div></div>
   </div>
 </div>
 
@@ -240,36 +327,36 @@
           background:#fff;border:1.5px solid #fca5a5;border-radius:12px;margin-bottom:8px">
           <span style="font-size:16px;flex-shrink:0">🕊️</span>
           <div style="flex:1">
-            <div style="font-size:13px;font-weight:600;color:#1e293b;margin-bottom:4px">BOJ緊急利上げ</div>
+            <div style="font-size:13px;font-weight:600;color:#1e293b;margin-bottom:4px">BOJ実弾介入実施(USD/JPY<157)</div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
                 border-radius:8px;font-size:10px;font-weight:700">🔴 未発生</span>
               <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">
-                🕐 最終確認: 2026/3/31 20:46 JST</span>
+                🕐 最終確認: 2026/4/1 00:00 JST</span>
             </div>
           </div>
         </div><div style="display:flex;align-items:flex-start;gap:10px;padding:10px 14px;
           background:#fff;border:1.5px solid #fca5a5;border-radius:12px;margin-bottom:8px">
           <span style="font-size:16px;flex-shrink:0">🚢</span>
           <div style="flex:1">
-            <div style="font-size:13px;font-weight:600;color:#1e293b;margin-bottom:4px">財務省大規模介入実施</div>
+            <div style="font-size:13px;font-weight:600;color:#1e293b;margin-bottom:4px">Fed利上げシグナル再浮上</div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
                 border-radius:8px;font-size:10px;font-weight:700">🔴 未発生</span>
               <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">
-                🕐 最終確認: 2026/3/31 20:46 JST</span>
+                🕐 最終確認: 2026/4/1 00:00 JST</span>
             </div>
           </div>
         </div><div style="display:flex;align-items:flex-start;gap:10px;padding:10px 14px;
           background:#fff;border:1.5px solid #fca5a5;border-radius:12px;margin-bottom:8px">
           <span style="font-size:16px;flex-shrink:0">🤝</span>
           <div style="flex:1">
-            <div style="font-size:13px;font-weight:600;color:#1e293b;margin-bottom:4px">FED9月より前倒し利下げ確定</div>
+            <div style="font-size:13px;font-weight:600;color:#1e293b;margin-bottom:4px">中東即時停戦で原油急落・円安解消</div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <span style="background:#fff0f2;color:#ff3d5a;border:1px solid #fca5a5;padding:2px 8px;
                 border-radius:8px;font-size:10px;font-weight:700">🔴 未発生</span>
               <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:8px;font-size:11px">
-                🕐 最終確認: 2026/3/31 20:46 JST</span>
+                🕐 最終確認: 2026/4/1 00:00 JST</span>
             </div>
           </div>
         </div>
@@ -281,7 +368,7 @@
 <!-- ⑫ Layer2: スコア推移チャート -->
 <div class="sh"><h2>📈 Layer 2 — スコア推移チャート</h2></div>
 <span class="lbadge l2">蓄積データ</span>
-<span style="font-size:11px;color:var(--mu);margin-left:6px">3件 ｜ 2026-03-30〜</span>
+<span style="font-size:11px;color:var(--mu);margin-left:6px">4件 ｜ 2026-03-30〜</span>
 <div class="card" style="margin-top:8px">
   <div style="font-size:12px;color:var(--mu);margin-bottom:8px">環境スコアの時系列変化</div>
   <div style="position:relative;height:180px"><canvas id="c1"></canvas></div>
@@ -296,11 +383,11 @@
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
       <div style="font-size:12px;color:#64748b;width:100px;flex-shrink:0">IG ロング%</div>
       <div style="flex:1;height:10px;background:#e2e8f0;border-radius:5px;overflow:hidden">
-        <div style="height:100%;width:50%;background:linear-gradient(90deg,#00b96b,#34d399);border-radius:5px"></div>
+        <div style="height:100%;width:28.0%;background:linear-gradient(90deg,#00b96b,#34d399);border-radius:5px"></div>
       </div>
-      <div style="font-size:12px;font-weight:800;width:36px;text-align:right">データなし</div>
+      <div style="font-size:12px;font-weight:800;width:36px;text-align:right">28%</div>
     </div>
-    <div style="font-size:11px;color:#64748b;margin-bottom:12px;padding:4px 8px;background:#f8fafc;border-radius:6px">📎 データなし</div>
+    <div style="font-size:11px;color:#64748b;margin-bottom:12px;padding:4px 8px;background:#f8fafc;border-radius:6px">📎 中立</div>
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
       <div style="font-size:12px;color:#64748b;width:100px;flex-shrink:0">Myfxbook%</div>
       <div style="flex:1;height:10px;background:#e2e8f0;border-radius:5px;overflow:hidden">
@@ -337,7 +424,7 @@
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
             <div>
               <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">支配因子</div>
-              <div style="font-size:12px;color:#1e293b;line-height:1.6">パル原液に詳細あり</div>
+              <div style="font-size:12px;color:#1e293b;line-height:1.6">4.ニュース: BOJ・財務省の介入警告がエスカレート。Ueda総裁が利上げ可能性示唆。 neutral〜short。介入警戒と160節目の上値重さが支配。</div>
             </div>
             <div>
               <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">方向性バイアス</div>
@@ -354,7 +441,7 @@
             </div>
             <div>
               <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">方向性バイアス</div>
-              <div style="font-size:13px;font-weight:700;color:#3b82f6">-</div>
+              <div style="font-size:13px;font-weight:700;color:#3b82f6">金利差縮小+BOJ正常化→円強含み方向。</div>
             </div>
           </div>
         </div><div style="padding:14px 16px;background:#f5f3ff;border:2px solid #ddd6fe;
@@ -363,11 +450,11 @@
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
             <div>
               <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">支配因子</div>
-              <div style="font-size:12px;color:#1e293b;line-height:1.6">パル原液に詳細あり</div>
+              <div style="font-size:12px;color:#1e293b;line-height:1.6">【10. 前回からの変化】</div>
             </div>
             <div>
               <div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:3px">方向性バイアス</div>
-              <div style="font-size:13px;font-weight:700;color:#8b5cf6">BOJ利上げ議論継続・介入160水準接近。</div>
+              <div style="font-size:13px;font-weight:700;color:#8b5cf6">-</div>
             </div>
           </div>
         </div></div>
@@ -379,9 +466,9 @@
           background:#e6f9f1;margin-bottom:12px">
           <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
             <div style="text-align:center;min-width:60px">
-              <div style="font-size:34px;font-weight:900;line-height:1;color:#00b96b">40%</div>
+              <div style="font-size:34px;font-weight:900;line-height:1;color:#00b96b">25%</div>
               <div style="font-size:10px;color:#64748b;margin-top:2px">前回 40%</div>
-              <div style="font-size:11px;font-weight:700;margin-top:2px"><span style="color:#94a3b8">変化なし</span></div>
+              <div style="font-size:11px;font-weight:700;margin-top:2px"><span style="color:#ff3d5a">▼15%</span></div>
             </div>
             <div style="flex:1;min-width:200px">
               <div style="font-size:14px;font-weight:800;color:#00b96b;margin-bottom:8px">🟢 シナリオA：強気シナリオ（上昇継続）</div>
@@ -407,9 +494,9 @@
           background:#eff6ff;margin-bottom:12px">
           <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
             <div style="text-align:center;min-width:60px">
-              <div style="font-size:34px;font-weight:900;line-height:1;color:#3b82f6">35%</div>
+              <div style="font-size:34px;font-weight:900;line-height:1;color:#3b82f6">50%</div>
               <div style="font-size:10px;color:#64748b;margin-top:2px">前回 35%</div>
-              <div style="font-size:11px;font-weight:700;margin-top:2px"><span style="color:#94a3b8">変化なし</span></div>
+              <div style="font-size:11px;font-weight:700;margin-top:2px"><span style="color:#00b96b">▲15%</span></div>
             </div>
             <div style="flex:1;min-width:200px">
               <div style="font-size:14px;font-weight:800;color:#3b82f6;margin-bottom:8px">🔵 シナリオB：中立シナリオ（レンジ継続）</div>
@@ -444,7 +531,7 @@
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
                 <div>
                   <div style="font-size:11px;font-weight:700;color:#ff3d5a;margin-bottom:4px">▶ 発火条件</div>
-                  <ul style="list-style:none"><li style="font-size:12px;color:#94a3b8">パル原液に詳細あり</li></ul>
+                  <ul style="list-style:none"><li style="margin-bottom:3px;font-size:12px">【8. トレード判断トリガー】</li></ul>
                 </div>
                 <div>
                   <div style="font-size:11px;font-weight:700;color:#ff3d5a;margin-bottom:4px">✕ 否定条件</div>
@@ -469,12 +556,12 @@
        border-radius:14px;margin-bottom:14px">
     <div style="font-size:11px;font-weight:700;color:#64748b;margin-bottom:6px">📌 今日の推奨アクション</div>
     <div style="font-size:20px;font-weight:900;color:#64748b;margin-bottom:8px">👀 WATCH — 様子見</div>
-    <div style="font-size:13px;color:#1e293b;line-height:1.6">スコア+3 / NEUTRAL方向。主因: MIXED NO CLEAR DRIVER。詳細はパル原液を確認してください。</div>
+    <div style="font-size:13px;color:#1e293b;line-height:1.6">スコア-1 / NEUTRAL方向。主因: POLICY RISK。詳細はパル原液を確認してください。</div>
   </div>
   <div style="display:flex;gap:10px;flex-wrap:wrap">
     <div style="padding:8px 14px;background:#1e293b;border-radius:10px">
       <div style="font-size:10px;color:#94a3b8;margin-bottom:2px">スコア</div>
-      <div style="font-size:14px;font-weight:800;color:#fff">+3</div>
+      <div style="font-size:14px;font-weight:800;color:#fff">-1</div>
     </div>
     <div style="padding:8px 14px;background:#1e293b;border-radius:10px">
       <div style="font-size:10px;color:#94a3b8;margin-bottom:2px">方向</div>
@@ -496,38 +583,38 @@
   <div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
       box-shadow:0 2px 8px rgba(0,0,0,.04)">
       <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">ドル指数</div>
-      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">100.41</div>
-      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+0.51%</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">100.12</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+0.22%</div>
       <div style="font-size:10px;margin-top:5px">⚪ 中立</div>
     </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
       box-shadow:0 2px 8px rgba(0,0,0,.04)">
       <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">米10年金利</div>
-      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">%4.342</div>
-      <div style="font-size:12px;font-weight:700;color:#ff3d5a;margin-top:4px">-1.14%</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">%4.324</div>
+      <div style="font-size:12px;font-weight:700;color:#ff3d5a;margin-top:4px">-0.09%</div>
       <div style="font-size:10px;margin-top:5px">🟢 追い風</div>
     </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
       box-shadow:0 2px 8px rgba(0,0,0,.04)">
       <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">S&P500先物</div>
-      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">6,446</div>
-      <div style="font-size:12px;font-weight:700;color:#ff3d5a;margin-top:4px">-1.21%</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">6,460</div>
+      <div style="font-size:12px;font-weight:700;color:#ff3d5a;margin-top:4px">-1.00%</div>
       <div style="font-size:10px;margin-top:5px">🔴 逆方向</div>
     </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
       box-shadow:0 2px 8px rgba(0,0,0,.04)">
       <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">恐怖指数</div>
-      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">28.64</div>
-      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+13.07%</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">27.80</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+9.75%</div>
       <div style="font-size:10px;margin-top:5px">🔴 逆風</div>
     </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
       box-shadow:0 2px 8px rgba(0,0,0,.04)">
       <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">金</div>
-      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">$4,608</div>
-      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+5.31%</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">$4,632</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+5.87%</div>
       <div style="font-size:10px;margin-top:5px">🟢 同方向</div>
     </div><div style="background:#fff;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px;
       box-shadow:0 2px 8px rgba(0,0,0,.04)">
       <div style="font-size:11px;color:#64748b;font-weight:700;margin-bottom:6px">WTI原油</div>
-      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">$103.88</div>
-      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+9.95%</div>
+      <div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">$104.00</div>
+      <div style="font-size:12px;font-weight:700;color:#00b96b;margin-top:4px">+10.08%</div>
       <div style="font-size:10px;margin-top:5px">🟢 同方向</div>
     </div>
 </div>

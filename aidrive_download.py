@@ -2,63 +2,47 @@ import urllib.request, json, time
 from pathlib import Path
 
 API_KEY = "gsk-eyJjb2dlbl9pZCI6Ijg2NGI1NWZiLTFjOWQtNGFhYS04MTcyLWZiZTRmZmNkNjQyNSIsImtleV9pZCI6IjVlNjg2NGQ3LTUxZDItNDMyNy1hYzcwLTRjNzFiOWU4YTk5ZSIsImN0aW1lIjoxNzc1NDgzNTM0LCJjbGF1ZGVfYmlnX21vZGVsIjpudWxsLCJjbGF1ZGVfbWlkZGxlX21vZGVsIjpudWxsLCJjbGF1ZGVfc21hbGxfbW9kZWwiOm51bGx9fAslRuQHD6yWBe7ZCVlaBZWJTtmr0LQ6Fqffl60XRTHg"
-BASE_URL = "https://www.genspark.ai/api/tool_cli/aidrive"
-SAVE_DIR = Path.home() / "Desktop" / "aidrive_backup"
+BASE = "https://www.genspark.ai/api/tool_cli/aidrive"
+SAVE = Path.home() / "Desktop" / "aidrive_backup"
+HDR  = {"X-Api-Key": API_KEY, "Content-Type": "application/json"}
 
-def api(action, **kwargs):
-    body = json.dumps({"action": action, **kwargs}).encode()
-    req = urllib.request.Request(BASE_URL, data=body,
-        headers={"X-Api-Key": API_KEY, "Content-Type": "application/json"})
-    try:
-        res = urllib.request.urlopen(req, timeout=30)
-        return json.loads(res.read())
-    except Exception as e:
-        print(f"  APIエラー: {e}")
-        return None
+def call(action, path):
+    req = urllib.request.Request(BASE, json.dumps({"action":action,"path":path}).encode(), HDR)
+    res = urllib.request.urlopen(req, timeout=30)
+    return json.loads(res.read()).get("session_state", {}).get("aidrive_result", {})
 
 def ls(path):
-    d = api("ls", path=path)
-    if not d:
-        return []
-    files = d.get("session_state", {}).get("aidrive_result", {}).get("files", [])
-    return files
+    return call("ls", path).get("files", [])
 
 def get_url(path):
-    d = api("get_readable_url", path=path)
-    if not d:
-        return None
-    return d.get("session_state", {}).get("aidrive_result", {}).get("readable_url")
+    return call("get_readable_url", path).get("readable_url")
 
-def download(url, local_path):
-    try:
-        urllib.request.urlretrieve(url, local_path)
-        return True
-    except Exception as e:
-        print(f"  DLエラー: {e}")
-        return False
+def dl(url, dest):
+    urllib.request.urlretrieve(url, dest)
 
-def walk(remote, local):
-    local.mkdir(parents=True, exist_ok=True)
-    for item in ls(remote):
-        name = item["name"]
-        rpath = item["path"]
-        lpath = local / name
-        if item["type"] == "directory":
-            print(f"📁 {rpath}")
-            walk(rpath, lpath)
+def walk(rpath, lpath):
+    lpath.mkdir(parents=True, exist_ok=True)
+    for f in ls(rpath):
+        name = f["name"]
+        rp   = f["path"]
+        lp   = lpath / name
+        if f["type"] == "directory":
+            print(f"📁 {rp}")
+            walk(rp, lp)
         else:
-            if lpath.exists():
+            if lp.exists():
                 print(f"  ⏭ {name}")
                 continue
             print(f"  ⬇ {name} ...", end=" ", flush=True)
-            url = get_url(rpath)
-            if url and download(url, lpath):
-                print(f"✅ {lpath.stat().st_size // 1024}KB")
-            else:
-                print("❌")
+            try:
+                url = get_url(rp)
+                dl(url, lp)
+                print(f"✅ {lp.stat().st_size//1024}KB")
+            except Exception as e:
+                print(f"❌ {e}")
             time.sleep(0.3)
 
-SAVE_DIR.mkdir(parents=True, exist_ok=True)
-print(f"保存先: {SAVE_DIR}")
-walk("/", SAVE_DIR)
+SAVE.mkdir(parents=True, exist_ok=True)
+print(f"保存先: {SAVE}")
+walk("/", SAVE)
 print("完了！")

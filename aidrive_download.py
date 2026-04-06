@@ -11,7 +11,10 @@ def call(action, path):
     conn = http.client.HTTPSConnection("www.genspark.ai", context=ctx)
     conn.request("POST", "/api/tool_cli/aidrive", body,
                  {"X-Api-Key": API_KEY, "Content-Type": "application/json"})
-    return json.loads(conn.getresponse().read()).get("session_state", {}).get("aidrive_result", {})
+    res  = conn.getresponse()
+    data = res.read()
+    conn.close()
+    return json.loads(data).get("session_state", {}).get("aidrive_result", {})
 
 def ls(path):
     return call("ls", path).get("files", [])

@@ -5,16 +5,24 @@ API_KEY = "gsk-eyJjb2dlbl9pZCI6Ijg2NGI1NWZiLTFjOWQtNGFhYS04MTcyLWZiZTRmZmNkNjQyN
 SAVE = Path.home() / "Desktop" / "aidrive_backup"
 UA = "Mozilla/5.0"
 
-def call(action, path):
-    body = json.dumps({"action": action, "path": path}).encode()
-    ctx  = ssl.create_default_context()
-    conn = http.client.HTTPSConnection("www.genspark.ai", context=ctx)
-    conn.request("POST", "/api/tool_cli/aidrive", body,
-                 {"X-Api-Key": API_KEY, "Content-Type": "application/json"})
-    res  = conn.getresponse()
-    data = res.read()
-    conn.close()
-    return json.loads(data).get("session_state", {}).get("aidrive_result", {})
+def call(action, path, retry=3):
+    for i in range(retry):
+        try:
+            body = json.dumps({"action": action, "path": path}).encode()
+            ctx  = ssl.create_default_context()
+            conn = http.client.HTTPSConnection("www.genspark.ai", context=ctx, timeout=30)
+            conn.request("POST", "/api/tool_cli/aidrive", body,
+                         {"X-Api-Key": API_KEY, "Content-Type": "application/json"})
+            res  = conn.getresponse()
+            data = res.read()
+            conn.close()
+            return json.loads(data).get("session_state", {}).get("aidrive_result", {})
+        except Exception as e:
+            if i < retry - 1:
+                time.sleep(2)
+            else:
+                raise e
+    return {}
 
 def ls(path):
     return call("ls", path).get("files", [])
@@ -47,7 +55,7 @@ def walk(rpath, lpath):
                 print(f"✅ {lp.stat().st_size // 1024}KB")
             except Exception as e:
                 print(f"❌ {e}")
-            time.sleep(0.3)
+            time.sleep(0.5)
 
 SAVE.mkdir(parents=True, exist_ok=True)
 print(f"保存先: {SAVE}")

@@ -8,7 +8,7 @@ SAVE_DIR = Path.home() / "Desktop" / "aidrive_backup"
 def api(action, **kwargs):
     body = json.dumps({"action": action, **kwargs}).encode()
     req = urllib.request.Request(BASE_URL, data=body,
-        headers={"Authorization": f"Bearer {API_KEY}",
+        headers={"X-Api-Key": API_KEY,
                  "Content-Type": "application/json"})
     try:
         res = urllib.request.urlopen(req, timeout=30)

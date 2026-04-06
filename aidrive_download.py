@@ -8,8 +8,7 @@ SAVE_DIR = Path.home() / "Desktop" / "aidrive_backup"
 def api(action, **kwargs):
     body = json.dumps({"action": action, **kwargs}).encode()
     req = urllib.request.Request(BASE_URL, data=body,
-        headers={"X-Api-Key": API_KEY,
-                 "Content-Type": "application/json"})
+        headers={"X-Api-Key": API_KEY, "Content-Type": "application/json"})
     try:
         res = urllib.request.urlopen(req, timeout=30)
         return json.loads(res.read())
@@ -17,32 +16,22 @@ def api(action, **kwargs):
         print(f"  APIエラー: {e}")
         return None
 
-def get_url(path):
-    d = api("get_readable_url", path=path)
-    if not d:
-        return None
-    result = d.get("data", {}).get("result", "")
-    for line in result.split("\n"):
-        if line.startswith("http"):
-            return line.strip()
-    return None
-
 def ls(path):
     d = api("ls", path=path)
     if not d:
         return []
-    result = d.get("data", {}).get("result", "")
-    items = []
-    for line in result.split("\n"):
-        if " | " in line and not line.startswith("Name"):
-            parts = [p.strip() for p in line.split(" | ")]
-            if len(parts) >= 2:
-                items.append({"name": parts[0], "type": parts[1]})
-    return items
+    files = d.get("session_state", {}).get("aidrive_result", {}).get("files", [])
+    return files
 
-def download(url, path):
+def get_url(path):
+    d = api("get_readable_url", path=path)
+    if not d:
+        return None
+    return d.get("session_state", {}).get("aidrive_result", {}).get("readable_url")
+
+def download(url, local_path):
     try:
-        urllib.request.urlretrieve(url, path)
+        urllib.request.urlretrieve(url, local_path)
         return True
     except Exception as e:
         print(f"  DLエラー: {e}")
@@ -52,7 +41,7 @@ def walk(remote, local):
     local.mkdir(parents=True, exist_ok=True)
     for item in ls(remote):
         name = item["name"]
-        rpath = f"{remote}/{name}"
+        rpath = item["path"]
         lpath = local / name
         if item["type"] == "directory":
             print(f"📁 {rpath}")
@@ -71,5 +60,5 @@ def walk(remote, local):
 
 SAVE_DIR.mkdir(parents=True, exist_ok=True)
 print(f"保存先: {SAVE_DIR}")
-walk("", SAVE_DIR)
+walk("/", SAVE_DIR)
 print("完了！")

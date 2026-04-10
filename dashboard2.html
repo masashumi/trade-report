@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>マクロ統合ダッシュボード 04/02 14:00 JST</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Hiragino Sans","Yu Gothic",sans-serif;background:#f0f2f7;color:#2c3e50;}
+.wrap{max-width:1000px;margin:0 auto;padding:12px;}
+.label{font-size:11px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.g7{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+@media(max-width:640px){.g2,.g3,.g4,.g7{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ヘッダー -->
+<div style="text-align:center;padding:8px 0 12px;">
+  <div style="font-size:11px;color:#aaa;">更新: 04/02 14:00 JST ｜ マクロ統合ダッシュボード</div>
+</div>
+
+<!-- ═══ ① 結論エリア ═══ -->
+<div style="background:linear-gradient(135deg,#4a1a6e,#8e44ad);color:white;border-radius:20px;padding:20px;margin-bottom:14px;box-shadow:0 8px 32px rgba(0,0,0,0.15);">
+
+  <!-- リスク状態 -->
+  <div style="text-align:center;margin-bottom:16px;">
+    <div style="font-size:11px;opacity:0.7;margin-bottom:4px;">▶ 今日のリスク状態</div>
+    <div style="font-size:36px;font-weight:bold;letter-spacing:2px;">スタグフレ警戒 🚨</div>
+    <div style="font-size:13px;opacity:0.8;margin-top:4px;">スコア: +1</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:start;">
+
+    <!-- 強い市場 -->
+    <div>
+      <div style="font-size:11px;opacity:0.7;margin-bottom:8px;">🟢 強い（狙う）</div>
+      <div style="display:flex;flex-direction:column;gap:6px;"><div style="opacity:0.5;font-size:12px;">なし</div></div>
+    </div>
+
+    <!-- 戦略 -->
+    <div style="background:rgba(255,255,255,0.15);border-radius:14px;padding:14px;min-width:180px;text-align:center;">
+      <div style="font-size:11px;opacity:0.7;margin-bottom:6px;">⚡ 本日の戦略</div>
+      <div style="font-size:14px;font-weight:bold;line-height:1.6;">最難易度相場 — エネルギー・金のみ・新規は最小限</div>
+      <div style="margin-top:10px;font-size:11px;opacity:0.7;border-top:1px solid rgba(255,255,255,0.2);padding-top:8px;">関税詳細とトランプ演説余波で急変動リスク、新規ポジション控え</div>
+    </div>
+
+    <!-- 弱い市場 -->
+    <div>
+      <div style="font-size:11px;opacity:0.7;margin-bottom:8px;">🔴 弱い（回避）</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="background:rgba(0,0,0,0.2);color:rgba(255,255,255,0.8);padding:4px 10px;border-radius:20px;font-size:12px;">銅🏭 ▼</span><span style="background:rgba(0,0,0,0.2);color:rgba(255,255,255,0.8);padding:4px 10px;border-radius:20px;font-size:12px;">AUD/USD ▼</span><span style="background:rgba(0,0,0,0.2);color:rgba(255,255,255,0.8);padding:4px 10px;border-radius:20px;font-size:12px;">GBP/USD ▼</span></div>
+    </div>
+  </div>
+
+  <!-- レジームサマリー -->
+  <div style="background:rgba(0,0,0,0.15);border-radius:10px;padding:10px 14px;margin-top:14px;font-size:12px;line-height:1.6;text-align:center;">
+    <span style="opacity:0.7;">相場モード: </span><strong>地政学供給ショック＋関税二重パンチ → スタグフレ移行</strong>
+    <br><span style="opacity:0.8;font-size:11px;">イラン戦争とLiberation Day関税が同時に市場を圧迫、先行き極度の不透明感</span>
+  </div>
+</div>
+
+<!-- ═══ ② 理由エリア ═══ -->
+<div class="label">② 理由 — 何がそう言わせているか</div>
+<div class="g7" style="margin-bottom:14px;">
+        <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="font-size:20px;">💰</span>
+            <div style="flex:1;">
+              <div style="font-size:12px;font-weight:bold;color:#2c3e50;">金利</div>
+              <div style="font-size:10px;color:#999;">TIGHT</div>
+            </div>
+            <div style="font-size:22px;font-weight:bold;color:#e74c3c;">▼2</div>
+          </div>
+          <div style="background:#f0f0f0;border-radius:4px;height:6px;margin-bottom:8px;">
+            <div style="width:40%;height:6px;background:#e74c3c;border-radius:4px;"></div>
+          </div>
+          <div style="font-size:11px;color:#666;line-height:1.5;">US10Y 4.36%に上昇、インフレ懸念でタカ派圧力強まる</div>
+        </div>
+        <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="font-size:20px;">😱</span>
+            <div style="flex:1;">
+              <div style="font-size:12px;font-weight:bold;color:#2c3e50;">リスク・VIX</div>
+              <div style="font-size:10px;color:#999;">MIXED</div>
+            </div>
+            <div style="font-size:22px;font-weight:bold;color:#e74c3c;">▼2</div>
+          </div>
+          <div style="background:#f0f0f0;border-radius:4px;height:6px;margin-bottom:8px;">
+            <div style="width:40%;height:6px;background:#e74c3c;border-radius:4px;"></div>
+          </div>
+          <div style="font-size:11px;color:#666;line-height:1.5;">停戦期待で株反発もLiberation Day関税で再度不透明</div>
+        </div>
+        <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="font-size:20px;">💵</span>
+            <div style="flex:1;">
+              <div style="font-size:12px;font-weight:bold;color:#2c3e50;">ドル(DXY)</div>
+              <div style="font-size:10px;color:#999;">FIRM</div>
+            </div>
+            <div style="font-size:22px;font-weight:bold;color:#27ae60;">▲1</div>
+          </div>
+          <div style="background:#f0f0f0;border-radius:4px;height:6px;margin-bottom:8px;">
+            <div style="width:20%;height:6px;background:#27ae60;border-radius:4px;"></div>
+          </div>
+          <div style="font-size:11px;color:#666;line-height:1.5;">DXY 99.9、関税期待でドル底堅いが年間では-3.9%</div>
+        </div>
+        <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="font-size:20px;">🔥</span>
+            <div style="flex:1;">
+              <div style="font-size:12px;font-weight:bold;color:#2c3e50;">インフレ</div>
+              <div style="font-size:10px;color:#999;">HOT</div>
+            </div>
+            <div style="font-size:22px;font-weight:bold;color:#27ae60;">▲5</div>
+          </div>
+          <div style="background:#f0f0f0;border-radius:4px;height:6px;margin-bottom:8px;">
+            <div style="width:100%;height:6px;background:#27ae60;border-radius:4px;"></div>
+          </div>
+          <div style="font-size:11px;color:#666;line-height:1.5;">OECD 4.2%予想、エネルギー＋関税＋食料の三重上昇圧力</div>
+        </div>
+        <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="font-size:20px;">📉</span>
+            <div style="flex:1;">
+              <div style="font-size:12px;font-weight:bold;color:#2c3e50;">成長・景気</div>
+              <div style="font-size:10px;color:#999;">WEAK</div>
+            </div>
+            <div style="font-size:22px;font-weight:bold;color:#e74c3c;">▼4</div>
+          </div>
+          <div style="background:#f0f0f0;border-radius:4px;height:6px;margin-bottom:8px;">
+            <div style="width:80%;height:6px;background:#e74c3c;border-radius:4px;"></div>
+          </div>
+          <div style="font-size:11px;color:#666;line-height:1.5;">イラン戦争＋関税＋インフレのトリプルショックで成長見通し急悪化</div>
+        </div>
+        <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="font-size:20px;">⚖️</span>
+            <div style="flex:1;">
+              <div style="font-size:12px;font-weight:bold;color:#2c3e50;">供給</div>
+              <div style="font-size:10px;color:#999;">DISRUPTED</div>
+            </div>
+            <div style="font-size:22px;font-weight:bold;color:#e74c3c;">▼5</div>
+          </div>
+          <div style="background:#f0f0f0;border-radius:4px;height:6px;margin-bottom:8px;">
+            <div style="width:100%;height:6px;background:#e74c3c;border-radius:4px;"></div>
+          </div>
+          <div style="font-size:11px;color:#666;line-height:1.5;">ホルムズ封鎖継続＋関税による貿易網二重寸断</div>
+        </div>
+        <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="font-size:20px;">🌍</span>
+            <div style="flex:1;">
+              <div style="font-size:12px;font-weight:bold;color:#2c3e50;">地政学</div>
+              <div style="font-size:10px;color:#999;">CRISIS</div>
+            </div>
+            <div style="font-size:22px;font-weight:bold;color:#27ae60;">▲4</div>
+          </div>
+          <div style="background:#f0f0f0;border-radius:4px;height:6px;margin-bottom:8px;">
+            <div style="width:80%;height:6px;background:#27ae60;border-radius:4px;"></div>
+          </div>
+          <div style="font-size:11px;color:#666;line-height:1.5;">トランプ演説で停戦期待やや後退、「極めて強く攻撃」宣言</div>
+        </div></div>
+
+<!-- ═══ ③ データエリア ═══ -->
+<div class="label">③ データ — マーケット数値</div>
+<div class="g4" style="margin-bottom:14px;">
+        <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+            <span style="font-size:18px;">🏦</span>
+            <span style="font-size:12px;color:#999;">米10年金利</span>
+          </div>
+          <div style="font-size:24px;font-weight:bold;color:#2c3e50;">4.36%</div>
+          <div style="font-size:13px;font-weight:bold;color:#27ae60;margin:4px 0;">▲ 4.00bp</div>
+          <div style="background:#f0f0f0;border-radius:4px;height:4px;margin-top:6px;">
+            <div style="width:40%;height:4px;background:#27ae60;border-radius:4px;"></div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+            <span style="font-size:18px;">💵</span>
+            <span style="font-size:12px;color:#999;">DXY</span>
+          </div>
+          <div style="font-size:24px;font-weight:bold;color:#2c3e50;">99.93</div>
+          <div style="font-size:13px;font-weight:bold;color:#e74c3c;margin:4px 0;">▼ 0.37%</div>
+          <div style="background:#f0f0f0;border-radius:4px;height:4px;margin-top:6px;">
+            <div style="width:4%;height:4px;background:#e74c3c;border-radius:4px;"></div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+            <span style="font-size:18px;">📈</span>
+            <span style="font-size:12px;color:#999;">S&P500</span>
+          </div>
+          <div style="font-size:24px;font-weight:bold;color:#2c3e50;">5670</div>
+          <div style="font-size:13px;font-weight:bold;color:#27ae60;margin:4px 0;">▲ 0.72%</div>
+          <div style="background:#f0f0f0;border-radius:4px;height:4px;margin-top:6px;">
+            <div style="width:7%;height:4px;background:#27ae60;border-radius:4px;"></div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+            <span style="font-size:18px;">😱</span>
+            <span style="font-size:12px;color:#999;">VIX</span>
+          </div>
+          <div style="font-size:24px;font-weight:bold;color:#2c3e50;">25.75</div>
+          <div style="font-size:13px;font-weight:bold;color:#e74c3c;margin:4px 0;">▼ 5.00%</div>
+          <div style="background:#f0f0f0;border-radius:4px;height:4px;margin-top:6px;">
+            <div style="width:50%;height:4px;background:#e74c3c;border-radius:4px;"></div>
+          </div>
+        </div></div>
+
+<!-- 銘柄ランキング + ニュース -->
+<div class="g2" style="margin-bottom:14px;">
+  <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+    <div style="font-size:12px;font-weight:bold;margin-bottom:10px;">📊 銘柄スコアランキング</div>
+    
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#95a5a618;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#1</span>
+          <span style="font-size:13px;flex:1;">原油🛢</span>
+          <span style="font-weight:bold;color:#95a5a6;font-size:14px;">→ +0</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#95a5a618;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#2</span>
+          <span style="font-size:13px;flex:1;">金🥇</span>
+          <span style="font-weight:bold;color:#95a5a6;font-size:14px;">→ +0</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#95a5a618;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#3</span>
+          <span style="font-size:13px;flex:1;">USD/JPY🇯🇵</span>
+          <span style="font-weight:bold;color:#95a5a6;font-size:14px;">→ +0</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#95a5a618;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#4</span>
+          <span style="font-size:13px;flex:1;">USD/CAD</span>
+          <span style="font-weight:bold;color:#95a5a6;font-size:14px;">→ +0</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#e74c3c18;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#5</span>
+          <span style="font-size:13px;flex:1;">EUR/USD</span>
+          <span style="font-weight:bold;color:#e74c3c;font-size:14px;">▼ -1</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#e74c3c18;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#6</span>
+          <span style="font-size:13px;flex:1;">天然ガス🔥</span>
+          <span style="font-weight:bold;color:#e74c3c;font-size:14px;">▼ -1</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#e74c3c18;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#7</span>
+          <span style="font-size:13px;flex:1;">銀</span>
+          <span style="font-weight:bold;color:#e74c3c;font-size:14px;">▼ -2</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#e74c3c18;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#8</span>
+          <span style="font-size:13px;flex:1;">小麦🌾</span>
+          <span style="font-weight:bold;color:#e74c3c;font-size:14px;">▼ -2</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#e74c3c18;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#9</span>
+          <span style="font-size:13px;flex:1;">プラチナ</span>
+          <span style="font-weight:bold;color:#e74c3c;font-size:14px;">▼ -3</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#e74c3c18;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#10</span>
+          <span style="font-size:13px;flex:1;">S&P500📈</span>
+          <span style="font-weight:bold;color:#e74c3c;font-size:14px;">▼ -3</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#e74c3c18;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#11</span>
+          <span style="font-size:13px;flex:1;">NASDAQ</span>
+          <span style="font-weight:bold;color:#e74c3c;font-size:14px;">▼ -3</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#e74c3c18;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#12</span>
+          <span style="font-size:13px;flex:1;">ドル💵</span>
+          <span style="font-weight:bold;color:#e74c3c;font-size:14px;">▼ -3</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#e74c3c18;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#13</span>
+          <span style="font-size:13px;flex:1;">GBP/USD</span>
+          <span style="font-weight:bold;color:#e74c3c;font-size:14px;">▼ -3</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#e74c3c18;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#14</span>
+          <span style="font-size:13px;flex:1;">AUD/USD</span>
+          <span style="font-weight:bold;color:#e74c3c;font-size:14px;">▼ -3</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;background:#e74c3c18;margin-bottom:4px;">
+          <span style="font-size:11px;color:#999;min-width:20px;">#15</span>
+          <span style="font-size:13px;flex:1;">銅🏭</span>
+          <span style="font-weight:bold;color:#e74c3c;font-size:14px;">▼ -5</span>
+        </div>
+  </div>
+  <div>
+    <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:10px;">
+      <div style="font-size:12px;font-weight:bold;margin-bottom:8px;">📰 ニュース</div>
+      <div style="padding:7px 0;border-bottom:1px solid #f5f5f5;display:flex;gap:8px;align-items:flex-start;"><span style="background:#e74c3c;color:white;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:bold;flex-shrink:0;margin-top:1px;">5</span><span style="font-size:11px;color:#555;line-height:1.5;">トランプ演説「2-3週間で極めて強く攻撃」、撤退時期明示せず</span></div><div style="padding:7px 0;border-bottom:1px solid #f5f5f5;display:flex;gap:8px;align-items:flex-start;"><span style="background:#e74c3c;color:white;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:bold;flex-shrink:0;margin-top:1px;">5</span><span style="font-size:11px;color:#555;line-height:1.5;">Liberation Day: トランプ相互関税の詳細を本日発表予定</span></div><div style="padding:7px 0;border-bottom:1px solid #f5f5f5;display:flex;gap:8px;align-items:flex-start;"><span style="background:#e67e22;color:white;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:bold;flex-shrink:0;margin-top:1px;">4</span><span style="font-size:11px;color:#555;line-height:1.5;">自動車関税25%が4/3深夜発効確定</span></div><div style="padding:7px 0;border-bottom:1px solid #f5f5f5;display:flex;gap:8px;align-items:flex-start;"><span style="background:#f39c12;color:white;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:bold;flex-shrink:0;margin-top:1px;">3</span><span style="font-size:11px;color:#555;line-height:1.5;">S&P500 +0.72%、停戦楽観で2日連続上昇</span></div>
+    </div>
+    <div style="background:white;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <div style="font-size:12px;font-weight:bold;margin-bottom:8px;">🚫 無効条件</div>
+      <div style="font-size:11px;color:#666;padding:5px 0;border-bottom:1px dashed #eee;">⚠️ イラン正式停戦＋ホルムズ再開通でBrent $80以下定着</div><div style="font-size:11px;color:#666;padding:5px 0;border-bottom:1px dashed #eee;">⚠️ Liberation Day関税が限定的（平均10%以下）で市場安堵</div><div style="font-size:11px;color:#666;padding:5px 0;border-bottom:1px dashed #eee;">⚠️ FRBが緊急利下げに転換（成長崩壊を認定）</div>
+    </div>
+  </div>
+</div>
+
+<div style="height:20px;"></div>
+</div>
+</body>
+</html>
